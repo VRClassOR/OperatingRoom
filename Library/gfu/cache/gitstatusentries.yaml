@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-10-26T12:26:32.065-05:00
+  lastUpdatedAtString: 2018-10-26T12:32:06.020-05:00
   initializedAtString: 2018-10-26T12:25:09.526-05:00
   entries:
   - path: Library\assetDatabase3
@@ -20,55 +20,55 @@ MonoBehaviour:
     projectPath: Library\assetDatabase3
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\EditorInstance.json
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
-    status: 1
-    staged: 0
+    status: 4
+    staged: 1
   - path: Library\gfu\cache\gitlocks.yaml
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
     originalPath: 
-    status: 1
-    staged: 0
+    status: 4
+    staged: 1
   - path: Library\gfu\cache\gitstatusentries.yaml
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gitstatusentries.yaml
     projectPath: Library\gfu\cache\gitstatusentries.yaml
     originalPath: 
-    status: 1
-    staged: 0
+    status: 4
+    staged: 1
   - path: Library\gfu\cache\gittrackingstatus.yaml
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gittrackingstatus.yaml
     projectPath: Library\gfu\cache\gittrackingstatus.yaml
     originalPath: 
-    status: 1
-    staged: 0
+    status: 4
+    staged: 1
   - path: Library\gfu\cache\repoinfo.yaml
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\repoinfo.yaml
     projectPath: Library\gfu\cache\repoinfo.yaml
     originalPath: 
-    status: 1
-    staged: 0
+    status: 4
+    staged: 1
   - path: Library\ScriptAssemblies\Assembly-UnityScript.dll
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll
     projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
     projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
     originalPath: 
     status: 3
-    staged: 0
+    staged: 1
   - path: Temp\__Backupscenes\0.backup
     fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\__Backupscenes\0.backup
     projectPath: Temp\__Backupscenes\0.backup
