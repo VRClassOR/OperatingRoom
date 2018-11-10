@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-11-01T12:23:43.316-05:00
-  initializedAtString: 2018-11-01T12:23:43.316-05:00
+  lastUpdatedAtString: 2018-11-10T14:18:28.197-06:00
+  initializedAtString: 2018-11-10T14:18:28.197-06:00
   currentGitRemote:
     name: origin
-    url: https://github.com/VRClassOR/OperatingRoom
+    url: https://github.com/VRClassOR/OperatingRoom.git
     login: 
     user: 
     host: 
@@ -24,14 +24,14 @@ MonoBehaviour:
     token: 
   currentGitBranch:
     name: master
-    tracking: 
+    tracking: origin/master
   currentConfigBranch:
     name: master
     remote:
-      name: 
-      url: 
-    trackingBranch: 
+      name: origin
+      url: https://github.com/VRClassOR/OperatingRoom.git
+    trackingBranch: master
   currentConfigRemote:
     name: origin
-    url: https://github.com/VRClassOR/OperatingRoom
+    url: https://github.com/VRClassOR/OperatingRoom.git
   currentHead: 

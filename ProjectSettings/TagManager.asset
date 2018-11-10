@@ -11,6 +11,10 @@ TagManager:
   - Partial3
   - Partial5
   - Partial7
+  - cylinder1
+  - cylinder2
+  - Cylinder1Child
+  - Cylinder2Child
   layers:
   - Default
   - TransparentFX
