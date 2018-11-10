@@ -23,8 +23,8 @@ public class Cylinder1 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     //private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("other:" + other);
-        if (other.gameObject.CompareTag("Cylinder2child") && !collisionAlreadyOccurred)
+        //Debug.Log("other:" + other);
+        if (other.gameObject.CompareTag("Cylinder2Child") && !collisionAlreadyOccurred)
         {
             // Check alignment
 
@@ -34,8 +34,8 @@ public class Cylinder1 : MonoBehaviour
             Debug.Log("Collision with Cylinder 2 detected \n");
             Debug.Log("Cylinder1 loc: " + Cylinder1Loc.position);
             Cylinder1Loc = gameObject.transform;
-            Destroy(gameObject.transform.parent.transform.parent.gameObject);
-            Destroy(other.gameObject.transform.parent.transform.parent.gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
+            Destroy(other.gameObject.transform.parent.gameObject);
 
             //Debug.Log(Sphere1Loc.position);
             Rigidbody partialInstance;
