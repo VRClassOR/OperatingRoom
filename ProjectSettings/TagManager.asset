@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sphere1
+  - Sphere2
+  - Sphere4
+  - Sphere6
+  - Partial3
+  - Partial5
+  - Partial7
   layers:
   - Default
   - TransparentFX
