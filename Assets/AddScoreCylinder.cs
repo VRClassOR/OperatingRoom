@@ -27,7 +27,7 @@ public class AddScoreCylinder : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-
+       
         KeepingScore.Score += 100;
 
     }

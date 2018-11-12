@@ -23,8 +23,9 @@ public class Cylinder1 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     //private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("other:" + other);
-        if (other.gameObject.CompareTag("Cylinder2Child") && !collisionAlreadyOccurred)
+        //Debug.Log("other:" + other)
+        
+        if (other.gameObject.name == "Cylinder2" && !collisionAlreadyOccurred)
         {
             // Check alignment
 
