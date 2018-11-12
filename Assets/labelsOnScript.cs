@@ -19,7 +19,7 @@ public class labelsOnScript : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
 
-    shouldDisplayText = true;
+        shouldDisplayText = true;
 
     }
 

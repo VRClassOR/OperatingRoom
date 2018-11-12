@@ -182,13 +182,17 @@ public class OVRGrabber : MonoBehaviour
         //canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         //canvas.pixelPerfect = true;
         Canvas canvas = otherCollider.gameObject.GetComponentInChildren<Canvas>();
-        GameObject text = canvas.transform.Find("Text").gameObject;
-        TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
-        textmesh.text = otherCollider.name;
-        Debug.Log(text);
-        //ObjectText.transform.SetParent(canvas.transform);
-        //text = ObjectText.AddComponent<Text>();
-        // text.text = "test";
+        if (canvas != null)
+        {
+            GameObject text = canvas.transform.Find("Text").gameObject;
+            TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
+            textmesh.text = otherCollider.name;
+            Debug.Log(text);
+            //ObjectText.transform.SetParent(canvas.transform);
+            //text = ObjectText.AddComponent<Text>();
+            // text.text = "test";
+        }
+
 
 
     }
@@ -217,10 +221,14 @@ public class OVRGrabber : MonoBehaviour
 
         Debug.Log("text shouldn't display" + otherCollider.name);
         Canvas canvas = otherCollider.gameObject.GetComponentInChildren<Canvas>();
-        GameObject text = canvas.transform.Find("Text").gameObject;
-        TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
-        textmesh.text = "";
-        Debug.Log(text);
+        if (canvas != null)
+        {
+            GameObject text = canvas.transform.Find("Text").gameObject;
+            TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
+            textmesh.text = "";
+            Debug.Log(text);
+        }
+        
     }
 
     protected void CheckForGrabOrRelease(float prevFlex)
