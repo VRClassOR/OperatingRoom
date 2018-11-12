@@ -40,8 +40,21 @@ public class Cylinder1 : MonoBehaviour
             //Debug.Log(Sphere1Loc.position);
             Rigidbody partialInstance;
             partialInstance = Instantiate(Partial3, Cylinder1Loc.position, Cylinder1Loc.rotation) as Rigidbody;
+            //OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
+            //ighthand
             //partialInstance = Instantiate(Partial3, gameObject.transform.position, gameObject.transform.rotation) as Rigidbody;
             Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Display text");
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("stop text");
+    }
+
 }

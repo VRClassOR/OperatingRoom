@@ -20,8 +20,9 @@ limitations under the License.
 ************************************************************************************/
 
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 /// <summary>
 /// Allows grabbing and throwing of objects with the OVRGrabbable component on them.
 /// </summary>
@@ -174,6 +175,22 @@ public class OVRGrabber : MonoBehaviour
         int refCount = 0;
         m_grabCandidates.TryGetValue(grabbable, out refCount);
         m_grabCandidates[grabbable] = refCount + 1;
+
+        Debug.Log("text should display" + otherCollider.name);
+        //need to dynamically instantiate canvas on other oject and add text
+        //Canvas canvas = otherCollider.gameObject.AddComponent<Canvas>();
+        //canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        //canvas.pixelPerfect = true;
+        Canvas canvas = otherCollider.gameObject.GetComponentInChildren<Canvas>();
+        GameObject text = canvas.transform.Find("Text").gameObject;
+        TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
+        textmesh.text = otherCollider.name;
+        Debug.Log(text);
+        //ObjectText.transform.SetParent(canvas.transform);
+        //text = ObjectText.AddComponent<Text>();
+        // text.text = "test";
+
+
     }
 
     void OnTriggerExit(Collider otherCollider)
@@ -197,6 +214,13 @@ public class OVRGrabber : MonoBehaviour
         {
             m_grabCandidates.Remove(grabbable);
         }
+
+        Debug.Log("text shouldn't display" + otherCollider.name);
+        Canvas canvas = otherCollider.gameObject.GetComponentInChildren<Canvas>();
+        GameObject text = canvas.transform.Find("Text").gameObject;
+        TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
+        textmesh.text = "";
+        Debug.Log(text);
     }
 
     protected void CheckForGrabOrRelease(float prevFlex)
