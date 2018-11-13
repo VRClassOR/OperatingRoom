@@ -1,22 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class KeepingScore : MonoBehaviour {
 
     public static int Score = 0;
     double timer = 0.0;
-	
-	// Update is called once per frame
-	void Update () {
+    TextMeshProUGUI textMesh;
+
+
+    //Canvas canvas = GameObject.GetComponent(typeof(Canvas));
+
+
+    private void Start()
+    {
+        Canvas canvas = GameObject.Find("ScoreKeeper").GetComponentInChildren<Canvas>();
+        GameObject canvasText = canvas.transform.Find("Text").gameObject;
+        textMesh = canvasText.GetComponent<TextMeshProUGUI>();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         timer += Time.deltaTime;
         // Score += (int)timer;
-
 	}
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(50,50,100,100), Score.ToString());
+        textMesh.text = "Score: " + Score.ToString() + "\n" + GameTimerScript.gameTimerText;
+            ;
     }
 }

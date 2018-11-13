@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameTimerScript : MonoBehaviour {
-    public Text gameTimerText;
+    public static string gameTimerText;
     float gameTimer = 0f;
     int minuteElapsedForScoring = 0;
 
@@ -26,6 +26,6 @@ public class GameTimerScript : MonoBehaviour {
 
         string timerString = string.Format("{0:0}:{1:00}:{2:00}", hours, minutes, seconds);
 
-        gameTimerText.text = timerString;
+        gameTimerText = timerString;
 	}
 }
