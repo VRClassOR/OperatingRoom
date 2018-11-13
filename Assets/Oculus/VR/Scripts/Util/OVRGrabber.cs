@@ -176,7 +176,7 @@ public class OVRGrabber : MonoBehaviour
         m_grabCandidates.TryGetValue(grabbable, out refCount);
         m_grabCandidates[grabbable] = refCount + 1;
 
-        Debug.Log("text should display" + otherCollider.name);
+        //Debug.Log("text should display" + otherCollider.name);
         //need to dynamically instantiate canvas on other oject and add text
         //Canvas canvas = otherCollider.gameObject.AddComponent<Canvas>();
         //canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -219,7 +219,7 @@ public class OVRGrabber : MonoBehaviour
             m_grabCandidates.Remove(grabbable);
         }
 
-        Debug.Log("text shouldn't display" + otherCollider.name);
+        //Debug.Log("text shouldn't display" + otherCollider.name);
         Canvas canvas = otherCollider.gameObject.GetComponentInChildren<Canvas>();
         if (canvas != null)
         {

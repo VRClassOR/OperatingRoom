@@ -27,8 +27,31 @@ public class AddScoreCylinder : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-       
-        KeepingScore.Score += 100;
+        //If we connect with the right object, up the score. If the wrong object, down the score
+        //no points for collissions with hands
+        if (other.gameObject.CompareTag("Instrument"))
+        {
+            Debug.Log("gameObject name: " + gameObject.name + "\n");
+            Debug.Log("OTHER gameObject name: " + other.gameObject.name + "\n");
+            if (other.gameObject.name == "Cylinder2")
+            {
+                KeepingScore.Score += 100;
+            }
+            
+        }
+        
+    }
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Instrument"))
+        {
+            Debug.Log("gameObject name: " + gameObject.name + "\n");
+            Debug.Log("OTHER gameObject name: " + other.gameObject.name + "\n");
+            if (other.gameObject.name != "Cylinder2")
+            {
+                KeepingScore.Score -= 100;
+            }
+        }
     }
 }
