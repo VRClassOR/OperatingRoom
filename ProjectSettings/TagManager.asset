@@ -12,6 +12,11 @@ TagManager:
   - Partial5
   - Partial7
   - Instrument
+  - cylinder2
+  - cylinder1
+  - Cylinder1Child
+  - Cylinder2Child
+  - joinCollider
   layers:
   - Default
   - TransparentFX

@@ -29,15 +29,17 @@ public class AddScoreCylinder : MonoBehaviour {
     {
         //If we connect with the right object, up the score. If the wrong object, down the score
         //no points for collissions with hands
-        if (other.gameObject.CompareTag("Instrument"))
+        if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == "Cylinder2Collider")
         {
+            KeepingScore.Score += 100;
             Debug.Log("gameObject name: " + gameObject.name + "\n");
             Debug.Log("OTHER gameObject name: " + other.gameObject.name + "\n");
-            if (other.gameObject.name == "Cylinder2")
-            {
+            /*if (other.gameObject.name == "Cylinder2" 
+                && transform.GetChild(0).tag == "joinCollider") //tag == "joinCollider")
+            { 
                 KeepingScore.Score += 100;
             }
-            
+            */
         }
         
     }
