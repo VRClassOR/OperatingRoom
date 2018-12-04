@@ -6,14 +6,14 @@ public class joinScript : MonoBehaviour
 {
 
     public Rigidbody combinedObject;
-    public Transform combinedObjectLoc;
+    //public Transform combinedObjectLoc;
     public GameObject joinObjectSmallCollider;
 
     bool collisionAlreadyOccurred = false;
     // Use this for initialization
     void Start()
     {
-        Debug.Log("Cylinder1 loc start: " + combinedObjectLoc.position);
+//        Debug.Log("Cylinder1 loc start: " + combinedObjectLoc.position);
     }
 
     // Update is called once per frame
@@ -37,6 +37,7 @@ public class joinScript : MonoBehaviour
             Vector3 othervec = other.bounds.max - other.bounds.min;
             Debug.Log("othervec:" + othervec);
             collisionAlreadyOccurred = true;
+            Transform combinedObjectLoc;
             combinedObjectLoc = gameObject.transform;
             Destroy(gameObject.transform.parent.gameObject);
             Destroy(other.gameObject.transform.parent.gameObject);
@@ -47,8 +48,10 @@ public class joinScript : MonoBehaviour
 
             //Debug.Log(Sphere1Loc.position);
             Rigidbody partialInstance;
-            partialInstance = Instantiate(combinedObject, combinedObjectLoc.position, combinedObjectLoc.rotation) as Rigidbody;
-            //OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
+           
+            OVRGrabber Lefthand = GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>();
+            //partialInstance = Instantiate(combinedObject, combinedObjectLoc.position, combinedObjectLoc.rotation) as Rigidbody;
+            partialInstance = Instantiate(combinedObject, Lefthand.transform.position, combinedObjectLoc.rotation) as Rigidbody;
             //ighthand
             //partialInstance = Instantiate(combinedObject, gameObject.transform.position, gameObject.transform.rotation) as Rigidbody;
             Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
