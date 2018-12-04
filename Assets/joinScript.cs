@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cylinder1 : MonoBehaviour
+public class joinScript : MonoBehaviour
 {
 
-    public Rigidbody Partial3;
-    public Transform Cylinder1Loc;
+    public Rigidbody combinedObject;
+    public Transform combinedObjectLoc;
+    public GameObject joinObjectSmallCollider;
 
     bool collisionAlreadyOccurred = false;
     // Use this for initialization
     void Start()
     {
-        Debug.Log("Cylinder1 loc start: " + Cylinder1Loc.position);
+        Debug.Log("Cylinder1 loc start: " + combinedObjectLoc.position);
     }
 
     // Update is called once per frame
@@ -26,8 +27,9 @@ public class Cylinder1 : MonoBehaviour
         //Debug.Log("other:" + other)
 
         //if (other.gameObject.name == "Cylinder2" && !collisionAlreadyOccurred)
-        if (other.gameObject.CompareTag("joinCollider") 
-            && other.gameObject.name == "Cylinder2Collider"
+        if (other.gameObject.CompareTag("joinCollider")
+            //&& other.gameObject.name == "Cylinder2Collider"
+            && other.gameObject.name == joinObjectSmallCollider.name
             && !collisionAlreadyOccurred)
         {
             // Check alignment
@@ -35,20 +37,20 @@ public class Cylinder1 : MonoBehaviour
             Vector3 othervec = other.bounds.max - other.bounds.min;
             Debug.Log("othervec:" + othervec);
             collisionAlreadyOccurred = true;
-            Cylinder1Loc = gameObject.transform;
+            combinedObjectLoc = gameObject.transform;
             Destroy(gameObject.transform.parent.gameObject);
             Destroy(other.gameObject.transform.parent.gameObject);
 
             Debug.Log("Collision with Cylinder 2 detected \n");
-            Debug.Log("Cylinder1 loc: " + Cylinder1Loc.position);
+            Debug.Log("Cylinder1 loc: " + combinedObjectLoc.position);
 
 
             //Debug.Log(Sphere1Loc.position);
             Rigidbody partialInstance;
-            partialInstance = Instantiate(Partial3, Cylinder1Loc.position, Cylinder1Loc.rotation) as Rigidbody;
+            partialInstance = Instantiate(combinedObject, combinedObjectLoc.position, combinedObjectLoc.rotation) as Rigidbody;
             //OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
             //ighthand
-            //partialInstance = Instantiate(Partial3, gameObject.transform.position, gameObject.transform.rotation) as Rigidbody;
+            //partialInstance = Instantiate(combinedObject, gameObject.transform.position, gameObject.transform.rotation) as Rigidbody;
             Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
         }
     }
