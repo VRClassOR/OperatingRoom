@@ -6,6 +6,8 @@ public class joinScript : MonoBehaviour
 {
 
     public Rigidbody combinedObject;
+
+    //public GameObject combinedObject;
     //public Transform combinedObjectLoc;
     public GameObject joinObjectSmallCollider;
 
@@ -24,7 +26,8 @@ public class joinScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     //private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("other:" + other)
+        Debug.Log("other:" + other.name);
+        Debug.Log("this:" + this.name);
 
         //if (other.gameObject.name == "Cylinder2" && !collisionAlreadyOccurred)
         if (other.gameObject.CompareTag("joinCollider")
@@ -35,26 +38,37 @@ public class joinScript : MonoBehaviour
             // Check alignment
 
             Vector3 othervec = other.bounds.max - other.bounds.min;
-            Debug.Log("othervec:" + othervec);
+            //Debug.Log("othervec:" + othervec);
             collisionAlreadyOccurred = true;
             Transform combinedObjectLoc;
             combinedObjectLoc = gameObject.transform;
             Destroy(gameObject.transform.parent.gameObject);
             Destroy(other.gameObject.transform.parent.gameObject);
 
-            Debug.Log("Collision with Cylinder 2 detected \n");
-            Debug.Log("Cylinder1 loc: " + combinedObjectLoc.position);
+            //Debug.Log("Collision with Cylinder 2 detected \n");
+            //Debug.Log("Cylinder1 loc: " + combinedObjectLoc.position);
 
 
             //Debug.Log(Sphere1Loc.position);
             Rigidbody partialInstance;
            
             OVRGrabber Lefthand = GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>();
-            //partialInstance = Instantiate(combinedObject, combinedObjectLoc.position, combinedObjectLoc.rotation) as Rigidbody;
-            partialInstance = Instantiate(combinedObject, Lefthand.transform.position, combinedObjectLoc.rotation) as Rigidbody;
-            //ighthand
-            //partialInstance = Instantiate(combinedObject, gameObject.transform.position, gameObject.transform.rotation) as Rigidbody;
-            Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
+
+            Debug.Log("Combined Object:" + combinedObject);
+
+
+            partialInstance = Instantiate(combinedObject, Lefthand.transform.position, new Quaternion(0, 0, 0, 1)) as Rigidbody;
+            //partialInstance = Instantiate(combinedObject, Lefthand.transform.position, Lefthand.transform.rotation) as Rigidbody;
+            //partialInstance = Instantiate(combinedObject, combinedObjectLoc.transform.position, combinedObjectLoc.rotation) as Rigidbody;
+
+            //Debug.Log("partial instance:" + partialInstance);
+
+
+            //GameObject partial = Instantiate(combinedObject) as GameObject;
+            //Vector3 newVector =  new Vector3((float) 1.59, (float) -.9505, (float) -2.451);
+            //partial.transform.position = Lefthand.transform.position;
+            //(1.59, -.9505, -2.451);
+            //Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
         }
     }
 

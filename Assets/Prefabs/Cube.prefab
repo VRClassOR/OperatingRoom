@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33183299246334542}
   - component: {fileID: 23981254643278696}
   - component: {fileID: 65551080912957676}
-  - component: {fileID: 54375978849984984}
   - component: {fileID: 114745184241700412}
+  - component: {fileID: 54566738846563228}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Partial3
@@ -86,7 +86,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343816088248812}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54375978849984984
+--- !u!54 &54566738846563228
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
