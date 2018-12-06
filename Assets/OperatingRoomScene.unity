@@ -218,7 +218,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54831929}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0.05, y: 9.96, z: 9.12}
+  m_LocalPosition: {x: -29.9, y: 9.96, z: -8.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3297,7 +3297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &919867495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3306,7 +3306,7 @@ BoxCollider:
   m_GameObject: {fileID: 919867494}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 6.0000286, y: 6.000067, z: 1.0000086}
   m_Center: {x: 0.000012159347, y: 2.9997966, z: 0.4999878}
@@ -4970,7 +4970,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &1344844364
 Transform:
   m_ObjectHideFlags: 0
@@ -6248,7 +6248,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1705253471
 GameObject:
   m_ObjectHideFlags: 0
