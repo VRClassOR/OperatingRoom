@@ -36,7 +36,8 @@ public class AddScoreCylinder : MonoBehaviour {
         {
             if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
             {
-                KeepingScore.Score += 100;
+                //KeepingScore.Score += 100;
+                //KeepingScore.Score += 100;
                 Debug.Log("gameObject name: " + gameObject.name + "\n");
                 Debug.Log("OTHER gameObject name: " + other.gameObject.name + "\n");
                 /*if (other.gameObject.name == "Cylinder2" 
@@ -60,7 +61,7 @@ public class AddScoreCylinder : MonoBehaviour {
             {
                 if (other.gameObject.name != joinObjectParentCollider.name) ;
                 {
-                    KeepingScore.Score -= 100;
+                    // KeepingScore.Score -= 100;
                 }
             }
             

@@ -58,6 +58,7 @@ public class joinScript : MonoBehaviour
 
 
                 partialInstance = Instantiate(combinedObject, Lefthand.transform.position, new Quaternion(0, 0, 0, 1)) as Rigidbody;
+                KeepingScore.Score += 100;
                 //partialInstance = Instantiate(combinedObject, Lefthand.transform.position, Lefthand.transform.rotation) as Rigidbody;
                 //partialInstance = Instantiate(combinedObject, combinedObjectLoc.transform.position, combinedObjectLoc.rotation) as Rigidbody;
 
@@ -71,7 +72,6 @@ public class joinScript : MonoBehaviour
                 //Debug.Log("Partial 3 loc: " + partialInstance.transform.position);
             }
         }
-            //if (other.gameObject.name == "Cylinder2" && !collisionAlreadyOccurred)
            
     }
 

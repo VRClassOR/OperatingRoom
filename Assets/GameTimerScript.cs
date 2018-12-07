@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameTimerScript : MonoBehaviour {
     public static string gameTimerText;
     float gameTimer = 0f;
-    int minuteElapsedForScoring = 0;
+    int secondsElapsedForScoring = 0;
 
 	// Update is called once per frame
 	void Update () {
@@ -18,10 +18,15 @@ public class GameTimerScript : MonoBehaviour {
         int minutes = (int)(gameTimer / 60) % 60;
         int hours = (int)(gameTimer / 3600) % 24;
 
-        if(minutes > minuteElapsedForScoring)
+        if(seconds > secondsElapsedForScoring)
         {
-            KeepingScore.Score -= 100;
-            minuteElapsedForScoring = minutes;
+            KeepingScore.Score -= 1;
+            secondsElapsedForScoring = seconds;
+
+            //Debug.Log("seconds: " + seconds);
+            //Debug.Log("gametimer: " + gameTimer);
+            //Debug.Log("secondsElapsedForScoring:" + secondsElapsedForScoring);
+            
         }
 
         string timerString = string.Format("{0:0}:{1:00}:{2:00}", hours, minutes, seconds);
