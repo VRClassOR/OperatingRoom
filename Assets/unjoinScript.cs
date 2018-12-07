@@ -2,58 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Most objects use "joinScript.cs" to combine object A and object B into object C and then delete objects A and B.
+ * All tools in the program follow this sequence except for "DrivingCap+GuideConnector+Handle+Driver+Connector+Nail",
+ * which must have the "handle" part of the instrument removed using the Left Hand or Right Hand.
+ * This script ensures that the "joinObjectSmallCollider" is not destroyed when a part of the tool is "unjoined" to
+ * create the next tool in the sequence.
+*/
 public class unjoinScript : MonoBehaviour {
 
     public Rigidbody combinedObject;
-    public GameObject joinObjectSmallCollider;
+    public GameObject RightHandCollider;
+    public GameObject LeftHandCollider;
+    
 
     bool collisionAlreadyOccurred = false;
 
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-    }
-
     private void OnTriggerEnter(Collider other)
-
     {
-
-        if (other != null && joinObjectSmallCollider != null)
+        if (other != null && RightHandCollider != null && LeftHandCollider != null)
         {
-            if (other.gameObject.name == joinObjectSmallCollider.name
-           && !collisionAlreadyOccurred)
+            if (other.gameObject.name == RightHandCollider.name || other.gameObject.name == LeftHandCollider.name
+                && !collisionAlreadyOccurred)
             {
-               
                 collisionAlreadyOccurred = true;
                 Transform combinedObjectLoc;
                 combinedObjectLoc = gameObject.transform;
                 Destroy(gameObject.transform.parent.gameObject);
- 
-                Rigidbody partialInstance;
 
                 OVRGrabber Lefthand = GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>();
+                OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
+                Vector3 newLoc = (Lefthand.transform.position + Righthand.transform.position) / 2;
 
-                partialInstance = Instantiate(combinedObject, Lefthand.transform.position, combinedObjectLoc.rotation) as Rigidbody;
-               
+                Rigidbody partialInstance;
+                partialInstance = Instantiate(combinedObject, newLoc, combinedObjectLoc.rotation) as Rigidbody;
+                KeepingScore.Score += 50;
+
             }
         }
-
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Display text");
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        Debug.Log("stop text");
-    }
-
 }
 

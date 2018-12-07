@@ -15,12 +15,7 @@ public class KeepingScore : MonoBehaviour {
         Canvas canvas = GameObject.Find("ScoreKeeper").GetComponentInChildren<Canvas>();
         GameObject canvasText = canvas.transform.Find("Text").gameObject;
         textMesh = canvasText.GetComponent<TextMeshProUGUI>();
-
     }
-
-    void Update () {
-
-	}
 
     private void OnGUI()
     {
