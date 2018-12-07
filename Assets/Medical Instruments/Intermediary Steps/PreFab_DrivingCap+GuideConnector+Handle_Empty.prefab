@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4705839352914182}
   - component: {fileID: 54500277753664134}
   m_Layer: 0
-  m_Name: PreFab_DrivingCap+GuideConnector+Handle_Empty
+  m_Name: Prefab_DrivingCap+GuideConnector+Handle_Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
