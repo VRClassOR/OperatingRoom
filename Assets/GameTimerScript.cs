@@ -7,25 +7,25 @@ public class GameTimerScript : MonoBehaviour {
     public static string gameTimerText;
     float gameTimer = 0f;
     int secondsElapsedForScoring = 0;
+    public static bool gameOver = false;
 
-	// Update is called once per frame
-	void Update () {
-        gameTimer += Time.deltaTime;
-        //Need to decrement Score if time goes up. Time is likely very small so converting to int won't be possible.
+    void Update() {
+
+        //stop timer if game is over
+        if (!gameOver) { 
+         gameTimer += Time.deltaTime;
+        }
         
 
         int seconds = (int)(gameTimer % 60);
         int minutes = (int)(gameTimer / 60) % 60;
         int hours = (int)(gameTimer / 3600) % 24;
 
+        //Decrease score by 1 each second
         if(seconds > secondsElapsedForScoring)
         {
             KeepingScore.Score -= 1;
             secondsElapsedForScoring = seconds;
-
-            //Debug.Log("seconds: " + seconds);
-            //Debug.Log("gametimer: " + gameTimer);
-            //Debug.Log("secondsElapsedForScoring:" + secondsElapsedForScoring);
             
         }
 

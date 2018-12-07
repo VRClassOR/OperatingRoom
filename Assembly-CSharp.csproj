@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\AddScoreCylinder.cs" />
     <Compile Include="Assets\Decrement_Score.cs" />
+    <Compile Include="Assets\GameEndScript.cs" />
     <Compile Include="Assets\GameTimerScript.cs" />
     <Compile Include="Assets\joinScript.cs" />
     <Compile Include="Assets\KeepingScore.cs" />

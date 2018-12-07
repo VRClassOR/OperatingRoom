@@ -10,10 +10,6 @@ public class KeepingScore : MonoBehaviour {
     double timer = 0.0;
     TextMeshProUGUI textMesh;
 
-
-    //Canvas canvas = GameObject.GetComponent(typeof(Canvas));
-
-
     private void Start()
     {
         Canvas canvas = GameObject.Find("ScoreKeeper").GetComponentInChildren<Canvas>();
@@ -22,11 +18,8 @@ public class KeepingScore : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
     void Update () {
 
-        timer += Time.deltaTime;
-        // Score += (int)timer;
 	}
 
     private void OnGUI()
