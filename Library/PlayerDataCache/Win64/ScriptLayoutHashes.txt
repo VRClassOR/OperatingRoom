@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/rileymr1/Desktop/OR builds/VROperatingRoom.exe
+C:/Users/lala/Desktop/VROperatingRoom.exe
 SceneListBegin?
 Assets/OperatingRoomScene.unity
 SceneListEnd?

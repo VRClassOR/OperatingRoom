@@ -20,6 +20,6 @@ public class KeepingScore : MonoBehaviour {
     private void OnGUI()
     {
         textMesh.text = "Score: " + Score.ToString() + "\n" + GameTimerScript.gameTimerText;
-            ;
+            
     }
 }

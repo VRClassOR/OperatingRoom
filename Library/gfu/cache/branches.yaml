@@ -12,24 +12,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2018-10-26T12:34:05.547-05:00
-  initializedAtString: 2018-10-26T12:34:05.500-05:00
+  lastUpdatedAtString: 2018-12-08T14:44:39.929-06:00
+  initializedAtString: 2018-12-08T14:44:39.910-06:00
   localBranches:
   - name: master
-    tracking: 
+    tracking: origin/master
   remoteBranches:
-  - name: origin/master
+  - name: origin/HEAD
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/VRClassOR/OperatingRoom
-    login: 
-    user: 
-    host: 
-    function: 0
-    token: 
-  - name: originNext
-    url: https://github.com/VRClassOR/OperatingRoom/tree/master/VROperatingRoom
+    url: https://github.com/VRClassOR/OperatingRoom.git
     login: 
     user: 
     host: 
@@ -41,28 +34,25 @@ MonoBehaviour:
     values:
     - name: master
       remote:
-        name: 
-        url: 
-      trackingBranch: 
+        name: origin
+        url: https://github.com/VRClassOR/OperatingRoom.git
+      trackingBranch: master
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
-      - master
+      - HEAD
     subKeyValues:
     - Values:
-      - name: master
+      - name: HEAD
         remote:
           name: origin
-          url: https://github.com/VRClassOR/OperatingRoom
+          url: https://github.com/VRClassOR/OperatingRoom.git
         trackingBranch: 
   configRemotes:
     keys:
     - origin
-    - originNext
     values:
     - name: origin
-      url: https://github.com/VRClassOR/OperatingRoom
-    - name: originNext
-      url: https://github.com/VRClassOR/OperatingRoom/tree/master/VROperatingRoom
+      url: https://github.com/VRClassOR/OperatingRoom.git
