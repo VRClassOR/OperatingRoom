@@ -1,8 +1,11 @@
 # Operating Room VR Project
 
 Built with Unity version 2018.2.15f1 using Oculus VR capabilities
+
 For CS 3892/UNIV 3279 Fall 2018
+
 In collaboration with Dr. Jonathan Schoenecker
+
 
 In this project, we created a virtual, interactive operating room environment in which we provided a tool kit (TFNA set) to mend a hip fracture. Users follow a sequence to assemble the tools and optimize their score by assembing the kit quickly and accurately.
 
