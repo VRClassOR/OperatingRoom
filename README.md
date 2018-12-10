@@ -34,7 +34,7 @@ The purpose of this simulation is to familiarize users, in particular medical st
 	- UnjoinScript: Performs the unjoining of the handle from the aggregate tool "Driving Cap + Guide Connector + Handle + Driver + Connector + Nail" without destroying the joinObjectSmallCollider.
 	
 ## Future Goals
-We have produced a most viable product, but there are still many features that can be implemented in the future:
+We have produced a minimum viable product, but there are still many features that can be implemented in the future:
 
 - Learning mode with video walkthrough
 - Menu compatible with Oculus VR
