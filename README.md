@@ -7,14 +7,14 @@ For CS 3892/UNIV 3279 Fall 2018
 In collaboration with Dr. Jonathan Schoenecker
 
 
-In this project, we created a virtual, interactive operating room environment in which we provided a tool kit (TFNA set) to mend a hip fracture. Users follow a sequence to assemble the tools and optimize their score by assembing the kit quickly and accurately.
+In this project, we created a virtual, interactive operating room environment in which we provided a tool kit (TFN set) to mend a hip fracture. Users follow a sequence to assemble the tools and optimize their score by assembing the kit quickly and accurately.
 
 ## Motivation
-The purpose of this simulation is to familiarize users, in particular medical students, with the assembly process. A physical TFNA kit is expensive and inaccessible, so it is difficult to acclimate oneself to using one before entering the operating room. This simulation is a simple solution to that problem.
+The purpose of this simulation is to familiarize users, in particular medical students, with the assembly process. A physical TFN kit is expensive and inaccessible, so it is difficult to acclimate oneself to using one before entering the operating room. This simulation is a simple solution to that problem.
 
 ## Assets & Features
 - Operating room environment with tables and props
-- TFNA set
+- TFN set
 	- Singular tools
 		- Aiming arm
 		- Connector
