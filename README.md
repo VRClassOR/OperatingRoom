@@ -30,7 +30,6 @@ The purpose of this simulation is to familiarize users, in particular medical st
 	- KeepingScore: Displays the current score.
 	- TFN: Logs each collision occurrance for debugging purposes.
 	- JoinScript: Performs the "joining" of tools in order to build the set. If the user tries to combine two compatible tools A and B, a new aggregate tool C is formed, A and B are deleted, and the score is increased.
-	- LabelsOnScript: Turns labels on and off.
 	- UnjoinScript: Performs the unjoining of the handle from the aggregate tool "Driving Cap + Guide Connector + Handle + Driver + Connector + Nail" without destroying the joinObjectSmallCollider.
 	
 ## Future Goals
