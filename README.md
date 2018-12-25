@@ -1,4 +1,5 @@
 # Operating Room VR Project
+Created by: Ankur Lal, Abbey White, Michael Riley, Lexi Anderson, Sarah Tesfaye
 
 Built with Unity version 2018.2.15f1 using Oculus VR capabilities
 
