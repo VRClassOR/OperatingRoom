@@ -187,7 +187,7 @@ public class OVRGrabber : MonoBehaviour
             GameObject text = canvas.transform.Find("Text").gameObject;
             TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
             textmesh.text = otherCollider.name;
-            Debug.Log(text);
+            //Debug.Log(text);
             //ObjectText.transform.SetParent(canvas.transform);
             //text = ObjectText.AddComponent<Text>();
             // text.text = "test";
