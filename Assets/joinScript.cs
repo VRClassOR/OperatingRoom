@@ -14,22 +14,27 @@ public class joinScript : MonoBehaviour
     private GameObject joinObject_other;
     private FixedJoint myJoint;
 
+    //private void Update()
+    //{
+    //    if(isAttached)
+    //    {
+    //AssemblyManager = GameObject.Find("AssemblyManager");
+    //AssemblyManager.transform.position = joinObject_this.transform.position - joinObject_this.transform.localPosition;
+    //AssemblyManager.transform.position = new Vector3(.2f, 1.5f, -5f);
+    //Debug.Log("join object pos: " + joinObject_this.transform.position);
+    //AssemblyManager.transform.position = joinObject_this.transform.position;
+    //Debug.Log("join object pos: " + joinObject_this.transform.position);
+    //Debug.Log("assembly manager pos: " + AssemblyManager.transform.position);
+    //Vector3 offset = new Vector3(.5f, .5f, .5f);
+    //joinObject_other.transform.localPosition = joinObject_this.transform.localPosition + offset;
+    //float dist = (AssemblyManager.transform.position - joinObject_this.transform.position).magnitude;
+    //call method that changes position. this way, once the grabber is let go of, it snaps into place
+    //    }
+    //}
+
     private void Update()
     {
-        if(isAttached)
-        {
-            AssemblyManager = GameObject.Find("AssemblyManager");
-            //AssemblyManager.transform.position = joinObject_this.transform.position - joinObject_this.transform.localPosition;
-            //AssemblyManager.transform.position = new Vector3(.2f, 1.5f, -5f);
-            //Debug.Log("join object pos: " + joinObject_this.transform.position);
-        AssemblyManager.transform.position = joinObject_this.transform.position;
-            //Debug.Log("join object pos: " + joinObject_this.transform.position);
-            //Debug.Log("assembly manager pos: " + AssemblyManager.transform.position);
-            //Vector3 offset = new Vector3(.5f, .5f, .5f);
-            //joinObject_other.transform.localPosition = joinObject_this.transform.localPosition + offset;
-            //float dist = (AssemblyManager.transform.position - joinObject_this.transform.position).magnitude;
-            //call method that changes position. this way, once the grabber is let go of, it snaps into place
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,11 +66,27 @@ public class joinScript : MonoBehaviour
                 joinObject_other.transform.parent = AssemblyManager.transform;
                 joinObject_this.transform.parent = AssemblyManager.transform;
 
+                FollowMe followScript_other = joinObject_other.GetComponent<FollowMe>();
+                followScript_other.isAttached = true;
+                followScript_other.follow = joinObject_this.transform;
+                followScript_other.originalLocalPosition = joinObject_this.transform.localPosition;
+                followScript_other.originalLocalRotation = joinObject_this.transform.localRotation;
+
+                FollowMe followScript_this = joinObject_this.GetComponent<FollowMe>();
+                followScript_this.isAttached = true;
+                followScript_this.follow = joinObject_this.transform;
+                followScript_this.originalLocalPosition = joinObject_this.transform.localPosition;
+                followScript_this.originalLocalRotation = joinObject_this.transform.localRotation;
+
+                //Follow.follow = joinObject_this.transform;
+                //Follow.originalLocalPosition = joinObject_this.transform.localPosition;
+                //Follow.originalLocalRotation = joinObject_this.transform.localRotation;
+
                 //myJoint = joinObject_this.AddComponent<FixedJoint>();
                 //myJoint.connectedBody = joinObject_other.GetComponent<Rigidbody>();
 
-                joinObject_this.transform.localPosition = new Vector3 (0f, 0f, 0f);
-                joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f);
+                //joinObject_this.transform.localPosition = new Vector3 (0f, 0f, 0f);
+                //joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f);
 
                 isAttached = true;
 
