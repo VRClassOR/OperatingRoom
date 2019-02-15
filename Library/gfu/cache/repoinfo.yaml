@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-02-11T21:16:45.818-06:00
-  initializedAtString: 2019-02-11T21:16:45.818-06:00
+  lastUpdatedAtString: 2019-02-15T16:14:13.205-06:00
+  initializedAtString: 2019-02-15T16:06:14.927-06:00
   currentGitRemote:
     name: origin
     url: https://github.com/VRClassOR/OperatingRoom.git
@@ -23,14 +23,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: master
-    tracking: origin/master
+    name: test
+    tracking: 
   currentConfigBranch:
-    name: master
+    name: test
     remote:
-      name: origin
-      url: https://github.com/VRClassOR/OperatingRoom.git
-    trackingBranch: master
+      name: 
+      url: 
+    trackingBranch: 
   currentConfigRemote:
     name: origin
     url: https://github.com/VRClassOR/OperatingRoom.git

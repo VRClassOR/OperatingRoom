@@ -12,25 +12,6 @@ public class joinScript : MonoBehaviour
     private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
-    private FixedJoint myJoint;
-
-    //private void Update()
-    //{
-    //    if(isAttached)
-    //    {
-    //AssemblyManager = GameObject.Find("AssemblyManager");
-    //AssemblyManager.transform.position = joinObject_this.transform.position - joinObject_this.transform.localPosition;
-    //AssemblyManager.transform.position = new Vector3(.2f, 1.5f, -5f);
-    //Debug.Log("join object pos: " + joinObject_this.transform.position);
-    //AssemblyManager.transform.position = joinObject_this.transform.position;
-    //Debug.Log("join object pos: " + joinObject_this.transform.position);
-    //Debug.Log("assembly manager pos: " + AssemblyManager.transform.position);
-    //Vector3 offset = new Vector3(.5f, .5f, .5f);
-    //joinObject_other.transform.localPosition = joinObject_this.transform.localPosition + offset;
-    //float dist = (AssemblyManager.transform.position - joinObject_this.transform.position).magnitude;
-    //call method that changes position. this way, once the grabber is let go of, it snaps into place
-    //    }
-    //}
 
     private void Update()
     {
@@ -66,44 +47,30 @@ public class joinScript : MonoBehaviour
                 joinObject_other.transform.parent = AssemblyManager.transform;
                 joinObject_this.transform.parent = AssemblyManager.transform;
 
-                FollowMe followScript_other = joinObject_other.GetComponent<FollowMe>();
-                followScript_other.isAttached = true;
-                followScript_other.follow = joinObject_this.transform;
-                followScript_other.originalLocalPosition = joinObject_this.transform.localPosition;
-                followScript_other.originalLocalRotation = joinObject_this.transform.localRotation;
-
-                FollowMe followScript_this = joinObject_this.GetComponent<FollowMe>();
-                followScript_this.isAttached = true;
-                followScript_this.follow = joinObject_this.transform;
-                followScript_this.originalLocalPosition = joinObject_this.transform.localPosition;
-                followScript_this.originalLocalRotation = joinObject_this.transform.localRotation;
-
                 //Follow.follow = joinObject_this.transform;
-                //Follow.originalLocalPosition = joinObject_this.transform.localPosition;
-                //Follow.originalLocalRotation = joinObject_this.transform.localRotation;
+                Follow.follows.Add(joinObject_this.transform);
+                Follow.follows.Add(joinObject_other.transform);
 
-                //myJoint = joinObject_this.AddComponent<FixedJoint>();
-                //myJoint.connectedBody = joinObject_other.GetComponent<Rigidbody>();
+                Follow.originalLocalPosition = joinObject_this.transform.localPosition;
+                Follow.originalLocalRotation = joinObject_this.transform.localRotation;
 
-                //joinObject_this.transform.localPosition = new Vector3 (0f, 0f, 0f);
-                //joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f);
+                //FollowMe followScript_other = joinObject_other.GetComponent<FollowMe>();
+                //followScript_other.isAttached = true;
+                //followScript_other.follow = joinObject_this.transform;
+                //followScript_other.originalLocalPosition = joinObject_this.transform.localPosition;
+                //followScript_other.originalLocalRotation = joinObject_this.transform.localRotation;
+
+                //FollowMe followScript_this = joinObject_this.GetComponent<FollowMe>();
+                //followScript_this.isAttached = true;
+                //followScript_this.follow = joinObject_this.transform;
+                //followScript_this.originalLocalPosition = joinObject_this.transform.localPosition;
+                //followScript_this.originalLocalRotation = joinObject_this.transform.localRotation;
+
+                //joinObject_other.transform.position = new Vector3(0, 0, 0);
+                //joinObject_this.transform.position = new Vector3(0, 0, 0);
 
                 isAttached = true;
 
-                //AssemblyManager.transform.position = joinObject_this.transform.position;
-                //Vector3 offset = new Vector3(.5f, .5f, .5f);
-                //joinObject_other.transform.position = AssemblyManager.transform.position + offset;
-
-                //fix position of this and join object
-                //joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f); //since using localPosition, (0 0 0) sets to position of assemblyManager
-                //joinObject_this.transform.localPosition = new Vector3(1f, 1f, 1f);
-
-                //rhs is parent transform of gameObject, which is a smallCollider
-                //joinObject.transform.parent = gameObject.transform.parent.gameObject.transform;
-                //joinObject.transform.position = new Vector3(-.5f, 1.47f, -3f); //make vec a variable
-
-                //Rigidbody partialInstance;
-                //partialInstance = Instantiate(combinedObject, newLoc, combinedObjectLoc.rotation) as Rigidbody;
                 KeepingScore.Score += 50;
 
                 //DoubleCheck GameOver
