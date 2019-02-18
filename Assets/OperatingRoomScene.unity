@@ -808,13 +808,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184101837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08399999, y: 1.435, z: -3.0600002}
+  m_LocalPosition: {x: 0.584, y: -0.035000086, z: -0.06000018}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1290304936}
   - {fileID: 337677907}
-  m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_Father: {fileID: 1666738598}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &184101839
 Rigidbody:
@@ -9703,6 +9703,7 @@ GameObject:
   - component: {fileID: 1666738598}
   - component: {fileID: 1666738599}
   - component: {fileID: 1666738600}
+  - component: {fileID: 1666738601}
   m_Layer: 0
   m_Name: AssemblyManager
   m_TagString: Untagged
@@ -9719,9 +9720,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 1.47, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1838712494}
+  - {fileID: 184101838}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666738599
 MonoBehaviour:
@@ -9745,6 +9748,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf4526bbcc37774eb891482f6c9e07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  follow_GO: {fileID: 184101837}
+--- !u!114 &1666738601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666738597}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1ab5ffb159448408e8e8dd4c804404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!1 &1666748117
 GameObject:
   m_ObjectHideFlags: 0
@@ -11558,13 +11574,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1838712493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.085, y: 1.474, z: -3.004}
+  m_LocalPosition: {x: -0.58500004, y: 0.0039999485, z: -0.0039999485}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 247556054}
   - {fileID: 1767335483}
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_Father: {fileID: 1666738598}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1838712495
 Rigidbody:

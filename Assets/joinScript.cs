@@ -44,15 +44,16 @@ public class joinScript : MonoBehaviour
                 Debug.Log("join object other: " + joinObject_other.name);
                 AssemblyManager = GameObject.Find("AssemblyManager");
                 //make this and join object children of AssemblyManager
-                joinObject_other.transform.parent = AssemblyManager.transform;
-                joinObject_this.transform.parent = AssemblyManager.transform;
+
+                //joinObject_other.transform.parent = AssemblyManager.transform;
+                //joinObject_this.transform.parent = AssemblyManager.transform;
 
                 //Follow.follow = joinObject_this.transform;
-                Follow.follows.Add(joinObject_this.transform);
-                Follow.follows.Add(joinObject_other.transform);
+                //Follow.follows.Add(joinObject_this.transform);
+                //Follow.follows.Add(joinObject_other.transform);
 
-                Follow.originalLocalPosition = joinObject_this.transform.localPosition;
-                Follow.originalLocalRotation = joinObject_this.transform.localRotation;
+                //Follow.originalLocalPosition = joinObject_this.transform.localPosition;
+                //Follow.originalLocalRotation = joinObject_this.transform.localRotation;
 
                 //FollowMe followScript_other = joinObject_other.GetComponent<FollowMe>();
                 //followScript_other.isAttached = true;
@@ -70,6 +71,12 @@ public class joinScript : MonoBehaviour
                 //joinObject_this.transform.position = new Vector3(0, 0, 0);
 
                 isAttached = true;
+
+                //FollowByTag followScript_other = joinObject_other.GetComponent<FollowByTag>();
+                //followScript_other.isAttached = true;
+
+                //FollowByTag followScript_this = joinObject_this.GetComponent<FollowByTag>();
+                //followScript_this.isAttached = true;
 
                 KeepingScore.Score += 50;
 

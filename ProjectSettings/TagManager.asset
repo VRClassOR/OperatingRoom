@@ -17,6 +17,7 @@ TagManager:
   - Cylinder1Child
   - Cylinder2Child
   - joinCollider
+  - isJoined
   layers:
   - Default
   - TransparentFX
