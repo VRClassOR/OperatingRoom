@@ -226,7 +226,7 @@ public class OVRGrabber : MonoBehaviour
             GameObject text = canvas.transform.Find("Text").gameObject;
             TextMeshProUGUI textmesh = text.GetComponent<TextMeshProUGUI>();
             textmesh.text = "";
-            Debug.Log(text);
+            //Debug.Log(text);
         }
         
     }

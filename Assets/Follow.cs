@@ -26,42 +26,56 @@ public class Follow : MonoBehaviour {
 
     //public static Quaternion originalLocalRotation;
 
-    private List<GameObject> childrenList = new List<GameObject>();
-    private List<Transform> childTransformList = new List<Transform>();
-
-
-
-    private void Awake() //comment out when using join script
+    public void addFollow(GameObject follow)
     {
-        follow = follow_GO.transform;
+        Debug.Log("follow added");
+        //if (this.follow_GO == null)
+        //{
+            this.follow_GO = follow;
+            init();
+        //}
+    }
 
-        originalLocalPosition = follow.localPosition;
+    public void removeFollow(GameObject follow)
+    {
+        //Debug.Log("follow removed");
+        //if(follow_GO == follow)
+        //{
+        //    this.follow_GO = null;
+        //}
+        //set is attached to false
+    }
 
-        originalLocalRotation = follow.localRotation;
-        //Debug.Log("awake called");
-        //Debug.Log("Follow: " + follow);
-        //Debug.Log("local Pos " + originalLocalPosition);
-        //Debug.Log("local Rotation " + originalLocalRotation);
+    private void init() //comment out when using join script
+    {
+        //if (follow != null)
+        //{
+            follow = follow_GO.transform;
 
-        grabbableScript = follow_GO.GetComponent<OVRGrabbable>();
+            originalLocalPosition = follow.localPosition;
 
+            originalLocalRotation = follow.localRotation;
+            //Debug.Log("awake called");
+            //Debug.Log("Follow: " + follow);
+            //Debug.Log("local Pos " + originalLocalPosition);
+            //Debug.Log("local Rotation " + originalLocalRotation);
+
+            grabbableScript = follow_GO.GetComponent<OVRGrabbable>();
+        //}
+
+ 
     }
 
     private void Update()
     {
-        if (follow != null && !grabbableScript.isGrabbed)
+        if (follow_GO != null && follow != null )
+            //&& grabbableScript.isGrabbed)
         {
+            Debug.Log("follow update called");
             GameObject tempParent = follow.parent.gameObject;
 
-            foreach(Transform child in follow.parent.gameObject.transform)
-            {
-                childrenList.Add(child.gameObject);
-                childTransformList.Add(child.gameObject.transform);
-            }
-
-            follow.parent.gameObject.transform.DetachChildren();
-
             follow.parent = null;
+
             //Vector3 tempVector = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             //Debug.Log("follow not null");
             //Debug.Log("Follow: " + follow);
@@ -75,7 +89,7 @@ public class Follow : MonoBehaviour {
 
             //transform.position += new Vector3(0f, 0.0005f, 0f);
 
-            Debug.Log("Follow position: " + follow.position);
+            //Debug.Log("Follow position: " + follow.position);
 
             transform.position = follow.position;
 
@@ -94,30 +108,23 @@ public class Follow : MonoBehaviour {
             transform.rotation = follow.rotation;
 
             //moves the parent by the child's original offset from the parent
-            Vector3 tempVector = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            //Vector3 tempVector = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-            tempVector += -transform.right * originalLocalPosition.x;
+            //tempVector += -transform.right * originalLocalPosition.x;
 
-            tempVector += -transform.up * originalLocalPosition.y;
+            //tempVector += -transform.up * originalLocalPosition.y;
 
-            tempVector += -transform.forward * originalLocalPosition.z;
+            //tempVector += -transform.forward * originalLocalPosition.z;
 
-            transform.position = tempVector;
+            //transform.position = tempVector;
 
-            //transform.position += -transform.right * originalLocalPosition.x;
+            transform.position += -transform.right * originalLocalPosition.x;
 
-            //transform.position += -transform.up * originalLocalPosition.y;
+            transform.position += -transform.up * originalLocalPosition.y;
 
-            //transform.position += -transform.forward * originalLocalPosition.z;
+            transform.position += -transform.forward * originalLocalPosition.z;
 
             follow.parent = tempParent.transform;
-
-            for(int i = 0; i < childrenList.Count; i++)
-            {
-                childrenList[i].transform.parent = transform;
-                childrenList[i].transform.localPosition = childTransformList[i].localPosition;
-                childrenList[i].transform.localRotation = childTransformList[i].localRotation;
-            }
 
             //resets local rotation, undoing step 2
 

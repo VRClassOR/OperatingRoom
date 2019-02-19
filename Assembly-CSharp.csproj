@@ -67,6 +67,7 @@
     <Compile Include="Assets\FollowMe.cs" />
     <Compile Include="Assets\GameEndScript.cs" />
     <Compile Include="Assets\GameTimerScript.cs" />
+    <Compile Include="Assets\Grabbable_assembly.cs" />
     <Compile Include="Assets\joinScript.cs" />
     <Compile Include="Assets\KeepingScore.cs" />
     <Compile Include="Assets\labelsOnScript.cs" />

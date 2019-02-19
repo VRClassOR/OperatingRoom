@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 184101839}
   - component: {fileID: 184101844}
   - component: {fileID: 184101845}
+  - component: {fileID: 184101846}
   m_Layer: 0
   m_Name: Cylinder1
   m_TagString: Instrument
@@ -808,13 +809,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184101837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.584, y: -0.035000086, z: -0.06000018}
+  m_LocalPosition: {x: 0.08399999, y: 1.435, z: -3.0600002}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1290304936}
   - {fileID: 337677907}
-  m_Father: {fileID: 1666738598}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &184101839
 Rigidbody:
@@ -847,6 +848,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!136 &184101841
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -929,6 +931,23 @@ MonoBehaviour:
   originalLocalPosition: {x: 0, y: 0, z: 0}
   originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   AssemblyManager: {fileID: 0}
+--- !u!114 &184101846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184101837}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7050b3951af7e41a71d735f0f406da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  isAttached: 0
 --- !u!1 &194783942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1c13c9aa8e29fde46bc3a98d87127607,
@@ -2413,6 +2432,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &424036310
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3508,6 +3528,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!33 &628120126
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3902,6 +3923,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &670641137
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4703,6 +4725,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &855098865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5626,6 +5649,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!33 &966319200
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6988,6 +7012,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!33 &1113870807
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7087,6 +7112,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &1128962075
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7536,6 +7562,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!136 &1222631987
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7826,6 +7853,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &1306633855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7978,6 +8006,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &1338240890
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9600,6 +9629,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!33 &1622238078
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9720,11 +9750,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 1.47, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1838712494}
-  - {fileID: 184101838}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666738599
 MonoBehaviour:
@@ -9748,7 +9776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf4526bbcc37774eb891482f6c9e07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow_GO: {fileID: 184101837}
+  follow_GO: {fileID: 0}
 --- !u!114 &1666738601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9896,6 +9924,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &1669485822
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11560,6 +11589,7 @@ GameObject:
   - component: {fileID: 1838712495}
   - component: {fileID: 1838712500}
   - component: {fileID: 1838712501}
+  - component: {fileID: 1838712502}
   m_Layer: 0
   m_Name: Cylinder2
   m_TagString: Instrument
@@ -11574,13 +11604,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1838712493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58500004, y: 0.0039999485, z: -0.0039999485}
+  m_LocalPosition: {x: -1.085, y: 1.474, z: -3.004}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 247556054}
   - {fileID: 1767335483}
-  m_Father: {fileID: 1666738598}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1838712495
 Rigidbody:
@@ -11613,6 +11643,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!136 &1838712497
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11695,6 +11726,23 @@ MonoBehaviour:
   originalLocalPosition: {x: 0, y: 0, z: 0}
   originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
   AssemblyManager: {fileID: 0}
+--- !u!114 &1838712502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838712493}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7050b3951af7e41a71d735f0f406da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  isAttached: 0
 --- !u!1 &1844530725
 GameObject:
   m_ObjectHideFlags: 0
@@ -12320,6 +12368,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &1964287052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12679,6 +12728,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &2009212510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12914,6 +12964,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!23 &2029957361
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13213,6 +13264,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  isAttached: 0
 --- !u!54 &2078021495
 Rigidbody:
   m_ObjectHideFlags: 0

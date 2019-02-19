@@ -45,8 +45,14 @@ public class joinScript : MonoBehaviour
                 AssemblyManager = GameObject.Find("AssemblyManager");
                 //make this and join object children of AssemblyManager
 
-                //joinObject_other.transform.parent = AssemblyManager.transform;
-                //joinObject_this.transform.parent = AssemblyManager.transform;
+                joinObject_other.transform.parent = AssemblyManager.transform;
+                joinObject_this.transform.parent = AssemblyManager.transform;
+
+                OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
+                grabbableScript_other.isAttached = true;
+
+                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                grabbableScript_this.isAttached = true;
 
                 //Follow.follow = joinObject_this.transform;
                 //Follow.follows.Add(joinObject_this.transform);
