@@ -42,7 +42,7 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
-    public bool isAttached = false;
+    //public bool isAttached = false;
 
     /// <summary>
     /// If true, the object can currently be grabbed.
@@ -125,9 +125,10 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
-        if(isAttached)
+        //Debug.Log("gameObject.tag: " + gameObject.tag);
+
+        if (gameObject.tag == "isJoined")
         {
-            Debug.Log("Grab Begin called");
             GameObject AssemblyManager = GameObject.Find("AssemblyManager");
             Follow followScript = AssemblyManager.GetComponent<Follow>();
             followScript.addFollow(gameObject);
@@ -147,7 +148,7 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedBy = null;
         m_grabbedCollider = null;
 
-        if(isAttached)
+        if(gameObject.tag == "isJoined")
         {
             Debug.Log("Grab End called");
             GameObject AssemblyManager = GameObject.Find("AssemblyManager");

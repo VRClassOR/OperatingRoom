@@ -48,11 +48,14 @@ public class joinScript : MonoBehaviour
                 joinObject_other.transform.parent = AssemblyManager.transform;
                 joinObject_this.transform.parent = AssemblyManager.transform;
 
-                OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
-                grabbableScript_other.isAttached = true;
+                joinObject_other.tag = "isJoined";
+                joinObject_this.tag = "isJoined";
 
-                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
-                grabbableScript_this.isAttached = true;
+                //OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
+                //grabbableScript_other.isAttached = true;
+
+                //OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                //grabbableScript_this.isAttached = true;
 
                 //Follow.follow = joinObject_this.transform;
                 //Follow.follows.Add(joinObject_this.transform);
