@@ -37,7 +37,7 @@ public class Follow : MonoBehaviour {
         this.follow_GO = follow;
         this.follow = follow_GO.transform;
 
-        Debug.Log("originalLocalPosition trash: " + originalLocalPosition);
+        //Debug.Log("originalLocalPosition trash: " + originalLocalPosition);
 
         originalLocalPosition = this.follow.localPosition;
 
@@ -49,9 +49,19 @@ public class Follow : MonoBehaviour {
 
         follows = GameObject.FindGameObjectsWithTag("isJoined");
 
-        foreach(GameObject makeFollow in follows)
+        foreach (GameObject makeFollow in follows)
         {
-            makeFollow.transform.parent = this.follow;
+            makeFollow.transform.parent = gameObject.transform;
+        }
+
+
+        foreach (GameObject makeFollow in follows)
+        {
+            if(makeFollow.name != follow_GO.name)
+            {
+                makeFollow.transform.parent = this.follow;
+                Debug.Log(makeFollow + " is a child of " + this.follow);
+            }
         }
 
         //foreach (Transform child in gameObject.transform)
@@ -65,11 +75,12 @@ public class Follow : MonoBehaviour {
         //    //childTransformList.Add(child.gameObject.transform);
         //}
 
-        Debug.Log("originalLocalPosition original: " + originalLocalPosition);
+        //Debug.Log("originalLocalPosition original: " + originalLocalPosition);
     }
 
     public void removeFollow(GameObject follow)
     {
+        //follows = null;
         //Debug.Log("follow removed");
         //if(follow_GO == follow)
         //{

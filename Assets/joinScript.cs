@@ -51,11 +51,19 @@ public class joinScript : MonoBehaviour
                 joinObject_other.tag = "isJoined";
                 joinObject_this.tag = "isJoined";
 
-                //OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
-                //grabbableScript_other.isAttached = true;
+                OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
+                if(grabbableScript_other.isGrabbed)
+                {
+                    OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
+                    Collider other_grabPoints = grabbableScript_other.grabPoints;
+                    grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
+                }
 
-                //OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
-                //grabbableScript_this.isAttached = true;
+                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                if (grabbableScript_this.isGrabbed)
+                {
+                    OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
+                }
 
                 //Follow.follow = joinObject_this.transform;
                 //Follow.follows.Add(joinObject_this.transform);
