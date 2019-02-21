@@ -51,19 +51,45 @@ public class joinScript : MonoBehaviour
                 joinObject_other.tag = "isJoined";
                 joinObject_this.tag = "isJoined";
 
+                //OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
+                //Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
+                //Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(m_controller);
+
                 OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
-                if(grabbableScript_other.isGrabbed)
+                OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
+
+                Vector3 other_position = joinObject_other.transform.position;
+
+                if (grabbableScript_other.isGrabbed)
                 {
-                    OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
-                    Collider other_grabPoints = grabbableScript_other.grabPoints;
-                    grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
+                    other_grabbedBy.GrabEnd();
+                    //Collider other_grabPoints = grabbableScript_other.grabPoints;
+                    //grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
                 }
 
+                Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
+
+                //-0.1807941, 1.503024, -3.31163 //cyl1 pos
+
+                //0.256, -17.102, -85.687 //cyl1 rot
+
+                //- 0.1997525, 1.498708, -3.27729 //cyl2 pos
+
+                //- 2.594, -104.66, 2.397 //cyl2 rot
+
+                joinObject_other.transform.position = other_position + new Vector3(.3f, .3f, .3f);
+                //joinObject_other.transform.position = joinObject_this.transform.position + posDif;
+                other_grabbedBy.GrabBegin(); //check if grabbed??
+
                 OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
                 if (grabbableScript_this.isGrabbed)
                 {
-                    OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
+                    this_grabbedBy.GrabEnd();
                 }
+
+                joinObject_this.transform.position = other_position + new Vector3(-.3f, -.3f, -.3f);
+                this_grabbedBy.GrabBegin();
 
                 //Follow.follow = joinObject_this.transform;
                 //Follow.follows.Add(joinObject_this.transform);
