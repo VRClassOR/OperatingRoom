@@ -363,7 +363,7 @@ public class OVRGrabber : MonoBehaviour
     //protected void GrabEnd()
     public void GrabEnd() //made public so it can be called from joinScript
     {
-        Debug.Log("GrabEnd called");
+        //Debug.Log("GrabEnd called");
         if (m_grabbedObj != null)
         {
 			OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(m_controller), orientation = OVRInput.GetLocalControllerRotation(m_controller) };

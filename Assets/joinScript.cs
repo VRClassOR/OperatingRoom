@@ -6,26 +6,47 @@ public class joinScript : MonoBehaviour
 {
     public Rigidbody combinedObject;
     public GameObject joinObjectSmallCollider;
-    public GameObject AssemblyManager;
+    //public GameObject AssemblyManager;
 
     bool collisionAlreadyOccurred = false;
     private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
 
+    public GameObject[] follows;
+
     private void Update()
     {
         
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        //if (other != null && joinObjectSmallCollider != null)
+        //{
+        //    if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
+        //   //&& !collisionAlreadyOccurred)
+        //    {
+        //        Debug.Log("OnTriggerExit called");
+        //        follows = GameObject.FindGameObjectsWithTag("isJoined");
+        //        foreach (GameObject makeFollow in follows)
+        //        {
+        //            makeFollow.transform.parent = gameObject.transform;
+        //        }
+        //    }
+        //}
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("assembly manager position: " + AssemblyManager.transform.position);
         if (other != null && joinObjectSmallCollider != null)
         {
             if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name
            && !collisionAlreadyOccurred)
             {
                 collisionAlreadyOccurred = true;
+                GameObject AssemblyManager = GameObject.Find("AssemblyManager");
                 Transform combinedObjectLoc = gameObject.transform;
                 //Debug.Log("destroy, me: " + gameObject.transform.parent.gameObject);
                 //Debug.Log("destroy, other: " + other.gameObject.transform.parent.gameObject);
@@ -42,11 +63,12 @@ public class joinScript : MonoBehaviour
                 joinObject_this = gameObject.transform.parent.gameObject;
                 Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
                 Debug.Log("join object other: " + joinObject_other.name);
-                AssemblyManager = GameObject.Find("AssemblyManager");
                 //make this and join object children of AssemblyManager
 
                 joinObject_other.transform.parent = AssemblyManager.transform;
                 joinObject_this.transform.parent = AssemblyManager.transform;
+
+                //Debug.Log("joinObject_other.transform.position: " + joinObject_other.transform.position);
 
                 joinObject_other.tag = "isJoined";
                 joinObject_this.tag = "isJoined";
@@ -59,6 +81,9 @@ public class joinScript : MonoBehaviour
                 OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
 
                 Vector3 other_position = joinObject_other.transform.position;
+                Vector3 this_position = joinObject_this.transform.position;
+
+                //Debug.Log("other position: " + other_position);
 
                 if (grabbableScript_other.isGrabbed)
                 {
@@ -67,8 +92,9 @@ public class joinScript : MonoBehaviour
                     //grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
                 }
 
-                Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
+                //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
 
+                Vector3 thePosition = transform.TransformPoint(0.08303028f, -0.0120396f, -0.03835411f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
                 //0.256, -17.102, -85.687 //cyl1 rot
@@ -77,8 +103,12 @@ public class joinScript : MonoBehaviour
 
                 //- 2.594, -104.66, 2.397 //cyl2 rot
 
-                joinObject_other.transform.position = other_position + new Vector3(.3f, .3f, .3f);
+                //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
+
+                Debug.Log("other moved to: " + joinObject_other.transform.position);
                 //joinObject_other.transform.position = joinObject_this.transform.position + posDif;
+                joinObject_other.transform.position = thePosition;
+
                 other_grabbedBy.GrabBegin(); //check if grabbed??
 
                 OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
@@ -88,8 +118,10 @@ public class joinScript : MonoBehaviour
                     this_grabbedBy.GrabEnd();
                 }
 
-                joinObject_this.transform.position = other_position + new Vector3(-.3f, -.3f, -.3f);
+                //joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
                 this_grabbedBy.GrabBegin();
+
+                //Debug.Log("End of script other moved to: " + joinObject_other.transform.position);
 
                 //Follow.follow = joinObject_this.transform;
                 //Follow.follows.Add(joinObject_this.transform);
