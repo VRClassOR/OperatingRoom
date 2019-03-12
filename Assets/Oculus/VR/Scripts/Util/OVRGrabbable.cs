@@ -129,7 +129,8 @@ public class OVRGrabbable : MonoBehaviour
 
         if (gameObject.tag == "isJoined")
         {
-            GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+            //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+            GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
             Follow followScript = AssemblyManager.GetComponent<Follow>();
             followScript.addFollow(gameObject);
         }
@@ -150,8 +151,9 @@ public class OVRGrabbable : MonoBehaviour
 
         if(gameObject.tag == "isJoined")
         {
-            Debug.Log("Grab End called");
-            GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+            //Debug.Log("Grab End called");
+            //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+            GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
             Follow followScript = AssemblyManager.GetComponent<Follow>();
             followScript.removeFollow(gameObject);
         }

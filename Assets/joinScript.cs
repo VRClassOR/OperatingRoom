@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class joinScript : MonoBehaviour
 {
-    public Rigidbody combinedObject;
+    public Rigidbody combinedObject; //delete later, do not use
     public GameObject joinObjectSmallCollider;
-    //public GameObject AssemblyManager;
+    public GameObject nextObject;
 
     bool collisionAlreadyOccurred = false;
     private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
+    private GameObject AssemblyManager; //pass in from child collider
 
     public GameObject[] follows;
 
@@ -46,7 +47,7 @@ public class joinScript : MonoBehaviour
            && !collisionAlreadyOccurred)
             {
                 collisionAlreadyOccurred = true;
-                GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+                //AssemblyManager = GameObject.Find("AssemblyManager");
                 Transform combinedObjectLoc = gameObject.transform;
                 //Debug.Log("destroy, me: " + gameObject.transform.parent.gameObject);
                 //Debug.Log("destroy, other: " + other.gameObject.transform.parent.gameObject);
@@ -61,6 +62,7 @@ public class joinScript : MonoBehaviour
                 //maybe switch so joinObject is public global variable, and retrieve small collider?
                 joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
                 joinObject_this = gameObject.transform.parent.gameObject;
+                AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
                 Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
                 Debug.Log("join object other: " + joinObject_other.name);
                 //make this and join object children of AssemblyManager
@@ -103,13 +105,16 @@ public class joinScript : MonoBehaviour
 
                 //- 2.594, -104.66, 2.397 //cyl2 rot
 
-                //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
+                joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
 
                 Debug.Log("other moved to: " + joinObject_other.transform.position);
                 //joinObject_other.transform.position = joinObject_this.transform.position + posDif;
-                joinObject_other.transform.position = thePosition;
+                //joinObject_other.transform.position = thePosition;
 
-                other_grabbedBy.GrabBegin(); //check if grabbed??
+                if (other_grabbedBy != null)
+                {
+                    other_grabbedBy.GrabBegin();
+                }
 
                 OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
                 OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
@@ -118,8 +123,11 @@ public class joinScript : MonoBehaviour
                     this_grabbedBy.GrabEnd();
                 }
 
-                //joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
-                this_grabbedBy.GrabBegin();
+                joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
+                if (this_grabbedBy != null)
+                {
+                    this_grabbedBy.GrabBegin();
+                }
 
                 //Debug.Log("End of script other moved to: " + joinObject_other.transform.position);
 
@@ -146,6 +154,14 @@ public class joinScript : MonoBehaviour
                 //joinObject_this.transform.position = new Vector3(0, 0, 0);
 
                 isAttached = true;
+
+                if(nextObject != null)
+                {
+                    nextObject.SetActive(true);
+                } else {
+                    AssemblyManager.tag = "isJoined";
+                    //AssemblyManager.GetComponent<GameObject_data>().enabled = true;
+                }
 
                 //FollowByTag followScript_other = joinObject_other.GetComponent<FollowByTag>();
                 //followScript_other.isAttached = true;

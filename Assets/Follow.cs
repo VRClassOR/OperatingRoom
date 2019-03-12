@@ -49,18 +49,24 @@ public class Follow : MonoBehaviour {
 
         follows = GameObject.FindGameObjectsWithTag("isJoined");
 
+        //first put under assembly manager/un-nest anything
         foreach (GameObject makeFollow in follows)
         {
-            makeFollow.transform.parent = gameObject.transform;
+            if(makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
+            {
+                makeFollow.transform.parent = gameObject.transform;
+            }
+            //Debug.Log("gameObject.transform: " + gameObject);
         }
 
-
+        //second, make the grabbed object the parent of follows (with assembly manager the ultimate parent)
         foreach (GameObject makeFollow in follows)
         {
-            if(makeFollow.name != follow_GO.name)
+            if(makeFollow.name != follow_GO.name &&
+                makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
             {
                 makeFollow.transform.parent = this.follow;
-                Debug.Log(makeFollow + " is a child of " + this.follow);
+                //Debug.Log(makeFollow + " is a child of " + this.follow);
             }
         }
 

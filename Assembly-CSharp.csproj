@@ -66,6 +66,7 @@
     <Compile Include="Assets\FollowByTag.cs" />
     <Compile Include="Assets\FollowMe.cs" />
     <Compile Include="Assets\GameEndScript.cs" />
+    <Compile Include="Assets\GameObject_data.cs" />
     <Compile Include="Assets\GameTimerScript.cs" />
     <Compile Include="Assets\Grabbable_assembly.cs" />
     <Compile Include="Assets\joinScript.cs" />
@@ -358,7 +359,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\TFN.cs" />
     <Compile Include="Assets\unjoinScript.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
