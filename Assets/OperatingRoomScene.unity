@@ -9514,7 +9514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1581766679
 Transform:
   m_ObjectHideFlags: 0
@@ -13774,7 +13774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combinedObject: {fileID: 1113870805}
   joinObjectSmallCollider: {fileID: 2077653526}
-  nextObject: {fileID: 0}
+  nextObject: {fileID: 1581766678}
   follows: []
 --- !u!65 &2106272634
 BoxCollider:

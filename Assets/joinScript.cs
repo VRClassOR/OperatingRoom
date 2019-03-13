@@ -63,6 +63,7 @@ public class joinScript : MonoBehaviour
                 joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
                 joinObject_this = gameObject.transform.parent.gameObject;
                 AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
+                GameObject AssemblyManager_other = joinObject_other.GetComponent<GameObject_data>().AssemblyManager;
                 Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
                 Debug.Log("join object other: " + joinObject_other.name);
                 //make this and join object children of AssemblyManager
@@ -74,6 +75,11 @@ public class joinScript : MonoBehaviour
 
                 joinObject_other.tag = "isJoined";
                 joinObject_this.tag = "isJoined";
+                if(AssemblyManager != AssemblyManager_other)
+                {
+                    //joinObject_other.GetComponent<GameObject_data>().AssemblyManager = AssemblyManager; <-- need to do this for all things in old assembly manager
+                    //AssemblyManager_other.tag = "isJoined";
+                }
 
                 //OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
                 //Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
@@ -159,7 +165,7 @@ public class joinScript : MonoBehaviour
                 {
                     nextObject.SetActive(true);
                 } else {
-                    AssemblyManager.tag = "isJoined";
+                    //AssemblyManager.tag = "isJoined";
                     //AssemblyManager.GetComponent<GameObject_data>().enabled = true;
                 }
 

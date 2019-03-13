@@ -10,7 +10,7 @@ public class Grabbable_assembly : OVRGrabbable
         Debug.Log("Grab Begin override called");
         GameObject AssemblyManager = GameObject.Find("AssemblyManager");
         Follow followScript = AssemblyManager.GetComponent<Follow>();
-        followScript.addFollow(gameObject);
+        followScript.addFollow(gameObject, AssemblyManager);
     }
     //public override bool isGrabbed
     //{

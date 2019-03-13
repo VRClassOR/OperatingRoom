@@ -129,10 +129,11 @@ public class OVRGrabbable : MonoBehaviour
 
         if (gameObject.tag == "isJoined")
         {
+            Debug.Log("grabbed collider: " + m_grabbedCollider);
             //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
             GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
             Follow followScript = AssemblyManager.GetComponent<Follow>();
-            followScript.addFollow(gameObject);
+            followScript.addFollow(gameObject, AssemblyManager); //not sure if you need to pass in Assembly Manager
         }
         //Debug.Log("grabbed collider: " + m_grabbedCollider);
     }

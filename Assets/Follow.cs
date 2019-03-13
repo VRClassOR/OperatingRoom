@@ -29,9 +29,9 @@ public class Follow : MonoBehaviour {
 
     //public static Quaternion originalLocalRotation;
 
-    public void addFollow(GameObject follow)
+    public void addFollow(GameObject follow, GameObject AssemblyManager) //not sure you need to pass in AssemblyManager
     {
-        Debug.Log("follow added");
+        Debug.Log("addFollow called. follow: " + follow);
         //if (this.follow_GO == null)
         //{
         this.follow_GO = follow;
@@ -47,14 +47,17 @@ public class Follow : MonoBehaviour {
         //init();
         //}
 
-        follows = GameObject.FindGameObjectsWithTag("isJoined");
+        follows = GameObject.FindGameObjectsWithTag("isJoined"); 
 
         //first put under assembly manager/un-nest anything
         foreach (GameObject makeFollow in follows)
         {
             if(makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
             {
-                makeFollow.transform.parent = gameObject.transform;
+                Debug.Log("TEST " + makeFollow.GetComponent<GameObject_data>().AssemblyManager);
+                //makeFollow.transform.parent = gameObject.transform;
+                makeFollow.transform.parent = AssemblyManager.transform;
+                Debug.Log("Step 1" + makeFollow + "is now a child of " + gameObject);
             }
             //Debug.Log("gameObject.transform: " + gameObject);
         }
@@ -66,7 +69,7 @@ public class Follow : MonoBehaviour {
                 makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
             {
                 makeFollow.transform.parent = this.follow;
-                //Debug.Log(makeFollow + " is a child of " + this.follow);
+                Debug.Log("Step 2" + makeFollow + " is a child of " + this.follow);
             }
         }
 
