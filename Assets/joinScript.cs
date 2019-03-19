@@ -23,6 +23,17 @@ public class joinScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //Debug.Log("GameObject: " + gameObject);
+        //Debug.Log("other: " + other);
+        //if (other != null && joinObjectSmallCollider != null)
+        //{
+        //    if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name
+        //   && !collisionAlreadyOccurred)
+        //    {
+        //        Debug.Log("OnTriggerExit called with other: " + other);
+        //    }
+        //}
+                
         //if (other != null && joinObjectSmallCollider != null)
         //{
         //    if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
@@ -62,14 +73,16 @@ public class joinScript : MonoBehaviour
                 //maybe switch so joinObject is public global variable, and retrieve small collider?
                 joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
                 joinObject_this = gameObject.transform.parent.gameObject;
+
+                //null reference check
                 AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
                 GameObject AssemblyManager_other = joinObject_other.GetComponent<GameObject_data>().AssemblyManager;
-                Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
-                Debug.Log("join object other: " + joinObject_other.name);
+                //Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
+                //Debug.Log("join object other: " + joinObject_other.name);
                 //make this and join object children of AssemblyManager
 
-                joinObject_other.transform.parent = AssemblyManager.transform;
-                joinObject_this.transform.parent = AssemblyManager.transform;
+                //joinObject_other.transform.parent = AssemblyManager.transform;
+                //joinObject_this.transform.parent = AssemblyManager.transform;
 
                 //Debug.Log("joinObject_other.transform.position: " + joinObject_other.transform.position);
 
@@ -77,9 +90,37 @@ public class joinScript : MonoBehaviour
                 joinObject_this.tag = "isJoined";
                 if(AssemblyManager != AssemblyManager_other)
                 {
-                    //joinObject_other.GetComponent<GameObject_data>().AssemblyManager = AssemblyManager; <-- need to do this for all things in old assembly manager
+                    follows = GameObject.FindGameObjectsWithTag("isJoined");
+
+                    //first put under assembly manager other/un-nest anything
+                    foreach (GameObject makeFollow in follows)
+                    {
+                        if (makeFollow.GetComponent<GameObject_data>().AssemblyManager == AssemblyManager_other)
+                        {
+                            //Debug.Log("TEST " + makeFollow.GetComponent<GameObject_data>().AssemblyManager);
+                            //makeFollow.transform.parent = gameObject.transform;
+                            makeFollow.transform.parent = AssemblyManager_other.transform;
+                            //Debug.Log("Step 1" + makeFollow + "is now a child of " + gameObject);
+                        }
+                        //Debug.Log("gameObject.transform: " + gameObject);
+                    }
+
+                    //int children = AssemblyManager_other.transform.childCount;
+                    //Debug.Log("AssemblyManager_other.transform num children: " + children);
+
+                    foreach (Transform child in AssemblyManager_other.transform)
+                    {
+                        //Debug.Log("child in AssemblyManager_other: " + child);
+                        //Debug.Log(child + " AM: " + child.GetComponent<GameObject_data>().AssemblyManager);
+                        child.GetComponent<GameObject_data>().AssemblyManager = AssemblyManager;
+                        //Debug.Log(child + " AM: " + child.GetComponent<GameObject_data>().AssemblyManager);
+                    }
+                    //joinObject_other.GetComponent<GameObject_data>().AssemblyManager = AssemblyManager; //<-- need to do this for all things in old assembly manager
                     //AssemblyManager_other.tag = "isJoined";
                 }
+
+                //joinObject_other.transform.parent = AssemblyManager.transform;
+                //joinObject_this.transform.parent = AssemblyManager.transform;
 
                 //OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
                 //Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(m_controller);
@@ -101,8 +142,9 @@ public class joinScript : MonoBehaviour
                 }
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
-
-                Vector3 thePosition = transform.TransformPoint(0.08303028f, -0.0120396f, -0.03835411f);
+                
+                Vector3 thePosition = transform.TransformPoint(-27f, 6f, 306.9997f);
+                //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
                 //0.256, -17.102, -85.687 //cyl1 rot
@@ -111,11 +153,15 @@ public class joinScript : MonoBehaviour
 
                 //- 2.594, -104.66, 2.397 //cyl2 rot
 
-                joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
+                /////////////////////////////
+                joinObject_other.transform.position = thePosition;
+                //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
 
-                Debug.Log("other moved to: " + joinObject_other.transform.position);
+                joinObject_other.GetComponent<Renderer>().material.color = Color.green;
+
+                //Debug.Log("other moved to: " + joinObject_other.transform.position);
                 //joinObject_other.transform.position = joinObject_this.transform.position + posDif;
-                //joinObject_other.transform.position = thePosition;
+                
 
                 if (other_grabbedBy != null)
                 {
@@ -128,8 +174,10 @@ public class joinScript : MonoBehaviour
                 {
                     this_grabbedBy.GrabEnd();
                 }
+                ///////////////////////////////
+                //joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
+                joinObject_this.GetComponent<Renderer>().material.color = Color.green;
 
-                joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
                 if (this_grabbedBy != null)
                 {
                     this_grabbedBy.GrabBegin();
@@ -158,6 +206,10 @@ public class joinScript : MonoBehaviour
 
                 //joinObject_other.transform.position = new Vector3(0, 0, 0);
                 //joinObject_this.transform.position = new Vector3(0, 0, 0);
+
+                //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
+                //Follow followScript = AssemblyManager.GetComponent<Follow>();
+                //followScript.addFollow(gameObject, AssemblyManager); //not sure if you need to pass in Assembly Manager
 
                 isAttached = true;
 

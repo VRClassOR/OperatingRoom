@@ -31,7 +31,7 @@ public class Follow : MonoBehaviour {
 
     public void addFollow(GameObject follow, GameObject AssemblyManager) //not sure you need to pass in AssemblyManager
     {
-        Debug.Log("addFollow called. follow: " + follow);
+        //Debug.Log("addFollow called. follow: " + follow);
         //if (this.follow_GO == null)
         //{
         this.follow_GO = follow;
@@ -54,10 +54,10 @@ public class Follow : MonoBehaviour {
         {
             if(makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
             {
-                Debug.Log("TEST " + makeFollow.GetComponent<GameObject_data>().AssemblyManager);
+                //Debug.Log("TEST " + makeFollow.GetComponent<GameObject_data>().AssemblyManager);
                 //makeFollow.transform.parent = gameObject.transform;
                 makeFollow.transform.parent = AssemblyManager.transform;
-                Debug.Log("Step 1" + makeFollow + "is now a child of " + gameObject);
+                //Debug.Log("Step 1" + makeFollow + "is now a child of " + gameObject);
             }
             //Debug.Log("gameObject.transform: " + gameObject);
         }
@@ -69,7 +69,7 @@ public class Follow : MonoBehaviour {
                 makeFollow.GetComponent<GameObject_data>().AssemblyManager == this.gameObject)
             {
                 makeFollow.transform.parent = this.follow;
-                Debug.Log("Step 2" + makeFollow + " is a child of " + this.follow);
+                //Debug.Log("Step 2" + makeFollow + " is a child of " + this.follow);
             }
         }
 
@@ -89,6 +89,7 @@ public class Follow : MonoBehaviour {
 
     public void removeFollow(GameObject follow)
     {
+        //Debug.Log("remove follow called");
         //follows = null;
         //Debug.Log("follow removed");
         //if(follow_GO == follow)
