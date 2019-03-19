@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2019-03-14T19:00:33.921-05:00
-  initializedAtString: 2019-03-14T19:00:32.852-05:00
+  lastUpdatedAtString: 2019-03-19T15:50:48.729-05:00
+  initializedAtString: 2019-03-19T15:49:25.561-05:00
   entries:
   - path: Assembly-CSharp.csproj
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp.csproj
@@ -39,57 +39,93 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Oculus\VR\Prefabs.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Prefabs.meta
-    projectPath: Assets\Oculus\VR\Prefabs.meta
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab
-    projectPath: Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab.meta
-    projectPath: Assets\Oculus\VR\Prefabs\Cursor_Timer.prefab.meta
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab
-    projectPath: Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab.meta
-    projectPath: Assets\Oculus\VR\Prefabs\OVRCameraRig.prefab.meta
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Oculus\VR\Scenes\UI.unity
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Oculus\VR\Scenes\UI.unity
-    projectPath: Assets\Oculus\VR\Scenes\UI.unity
-    originalPath: 
-    status: 3
-    staged: 0
   - path: Assets\OperatingRoomScene.unity
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\OperatingRoomScene.unity
     projectPath: Assets\OperatingRoomScene.unity
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\Resources\OculusPlatformSettings.asset
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Resources\OculusPlatformSettings.asset
-    projectPath: Assets\Resources\OculusPlatformSettings.asset
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.20.08 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png
     originalPath: 
     status: 1
     staged: 0
-  - path: Assets\Resources\OculusPlatformSettings.asset.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Resources\OculusPlatformSettings.asset.meta
-    projectPath: Assets\Resources\OculusPlatformSettings.asset.meta
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.20.08 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.22.41 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.22.41 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.12 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.12 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.33 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.33 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.52 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.23.52 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.25.07 PM.png
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png.meta
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
+      at 12.25.07 PM.png.meta
+    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png.meta
     originalPath: 
     status: 1
     staged: 0
@@ -98,6 +134,12 @@ MonoBehaviour:
     projectPath: Library\assetDatabase3
     originalPath: 
     status: 3
+    staged: 0
+  - path: Library\CrashedAssetImports.txt
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\CrashedAssetImports.txt
+    projectPath: Library\CrashedAssetImports.txt
+    originalPath: 
+    status: 1
     staged: 0
   - path: Library\CurrentLayout.dwlt
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\CurrentLayout.dwlt
@@ -110,12 +152,6 @@ MonoBehaviour:
     projectPath: Library\EditorInstance.json
     originalPath: 
     status: 1
-    staged: 0
-  - path: Library\expandedItems
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\expandedItems
-    projectPath: Library\expandedItems
-    originalPath: 
-    status: 3
     staged: 0
   - path: Library\gfu\cache\gitstatusentries.yaml
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\gfu\cache\gitstatusentries.yaml
@@ -141,59 +177,77 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Library\LastSceneManagerSetup.txt
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\LastSceneManagerSetup.txt
-    projectPath: Library\LastSceneManagerSetup.txt
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\metadata\12\126d619cf4daa52469682f85c1378b4a
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\12\126d619cf4daa52469682f85c1378b4a
-    projectPath: Library\metadata\12\126d619cf4daa52469682f85c1378b4a
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\metadata\1f\1f4d3ae64a10d434db219de8b14348e1
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\1f\1f4d3ae64a10d434db219de8b14348e1
-    projectPath: Library\metadata\1f\1f4d3ae64a10d434db219de8b14348e1
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22
-    projectPath: Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22
+  - path: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
+    projectPath: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22.info
-    projectPath: Library\metadata\4b\4b629f1dfa717fc4bb4ca435dc566b22.info
+  - path: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
+    projectPath: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\metadata\5a\5a7682c244a150b49965c007720bdbb7
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5a\5a7682c244a150b49965c007720bdbb7
-    projectPath: Library\metadata\5a\5a7682c244a150b49965c007720bdbb7
+  - path: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
+    projectPath: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
     originalPath: 
-    status: 3
+    status: 1
     staged: 0
-  - path: Library\metadata\5a\5a7682c244a150b49965c007720bdbb7.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5a\5a7682c244a150b49965c007720bdbb7.info
-    projectPath: Library\metadata\5a\5a7682c244a150b49965c007720bdbb7.info
+  - path: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
+    projectPath: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
     originalPath: 
-    status: 3
+    status: 1
     staged: 0
-  - path: Library\ProjectSettings.asset
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ProjectSettings.asset
-    projectPath: Library\ProjectSettings.asset
+  - path: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
+    projectPath: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
     originalPath: 
-    status: 3
+    status: 1
     staged: 0
-  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+  - path: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
+    projectPath: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
     originalPath: 
-    status: 3
+    status: 1
+    staged: 0
+  - path: Library\metadata\85\853eb973534a37b419f044b1b125c281
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\85\853eb973534a37b419f044b1b125c281
+    projectPath: Library\metadata\85\853eb973534a37b419f044b1b125c281
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\85\853eb973534a37b419f044b1b125c281.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\85\853eb973534a37b419f044b1b125c281.info
+    projectPath: Library\metadata\85\853eb973534a37b419f044b1b125c281.info
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
+    projectPath: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
+    projectPath: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
+    projectPath: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
+    projectPath: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
+    originalPath: 
+    status: 1
     staged: 0
   - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
@@ -207,75 +261,9 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll
-    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
-    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\BuiltinAssemblies.stamp
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\BuiltinAssemblies.stamp
-    projectPath: Library\ScriptAssemblies\BuiltinAssemblies.stamp
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
-    projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
-    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
-    projectPath: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
-    originalPath: 
-    status: 3
-    staged: 0
   - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: ProjectSettings\ProjectSettings.asset
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\ProjectSettings\ProjectSettings.asset
-    projectPath: ProjectSettings\ProjectSettings.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: ProjectSettings\QualitySettings.asset
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\ProjectSettings\QualitySettings.asset
-    projectPath: ProjectSettings\QualitySettings.asset
     originalPath: 
     status: 3
     staged: 0
