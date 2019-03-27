@@ -7,6 +7,8 @@ public class joinScript : MonoBehaviour
     public Rigidbody combinedObject; //delete later, do not use
     public GameObject joinObjectSmallCollider;
     public GameObject nextObject;
+    //public GameObject nextObjectTransparent;
+    public GameObject currentObjTransparent;
 
     bool collisionAlreadyOccurred = false;
     private bool isAttached = false;
@@ -143,7 +145,7 @@ public class joinScript : MonoBehaviour
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
                 
-                Vector3 thePosition = transform.TransformPoint(-27f, 6f, 306.9997f);
+                Vector3 thePosition = transform.TransformPoint(-21.19889f, 23.17223f, 308.1013f);
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
@@ -154,7 +156,7 @@ public class joinScript : MonoBehaviour
                 //- 2.594, -104.66, 2.397 //cyl2 rot
 
                 /////////////////////////////
-                joinObject_other.transform.position = thePosition;
+                //joinObject_other.transform.position = thePosition;
                 //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
 
                 joinObject_other.GetComponent<Renderer>().material.color = Color.green;
@@ -216,10 +218,13 @@ public class joinScript : MonoBehaviour
                 if(nextObject != null)
                 {
                     nextObject.SetActive(true);
+                    // nextObjectTransparent.SetActive(true);
                 } else {
                     //AssemblyManager.tag = "isJoined";
                     //AssemblyManager.GetComponent<GameObject_data>().enabled = true;
                 }
+
+                currentObjTransparent.SetActive(false);
 
                 //FollowByTag followScript_other = joinObject_other.GetComponent<FollowByTag>();
                 //followScript_other.isAttached = true;
