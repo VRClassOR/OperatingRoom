@@ -70,6 +70,7 @@
     <Compile Include="Assets\GameObject_data.cs" />
     <Compile Include="Assets\GameTimerScript.cs" />
     <Compile Include="Assets\Grabbable_assembly.cs" />
+    <Compile Include="Assets\hapticScript.cs" />
     <Compile Include="Assets\joinScript.cs" />
     <Compile Include="Assets\KeepingScore.cs" />
     <Compile Include="Assets\labelsOnScript.cs" />

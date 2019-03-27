@@ -7,8 +7,15 @@ public class joinScript : MonoBehaviour
     public Rigidbody combinedObject; //delete later, do not use
     public GameObject joinObjectSmallCollider;
     public GameObject nextObject;
+<<<<<<< HEAD
     //public GameObject nextObjectTransparent;
     public GameObject currentObjTransparent;
+=======
+    private AudioSource audioSource;
+    //private AudioSource badSound;
+    public AudioClip goodClip;
+    public AudioClip badClip;
+>>>>>>> cf7b1d82786746486c9a945b205540e151be27c4
 
     bool collisionAlreadyOccurred = false;
     private bool isAttached = false;
@@ -90,7 +97,7 @@ public class joinScript : MonoBehaviour
 
                 joinObject_other.tag = "isJoined";
                 joinObject_this.tag = "isJoined";
-                if(AssemblyManager != AssemblyManager_other)
+                if (AssemblyManager != AssemblyManager_other)
                 {
                     follows = GameObject.FindGameObjectsWithTag("isJoined");
 
@@ -144,8 +151,13 @@ public class joinScript : MonoBehaviour
                 }
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
+<<<<<<< HEAD
                 
                 Vector3 thePosition = transform.TransformPoint(-21.19889f, 23.17223f, 308.1013f);
+=======
+
+                Vector3 thePosition = transform.TransformPoint(-27f, 6f, 306.9997f);
+>>>>>>> cf7b1d82786746486c9a945b205540e151be27c4
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
@@ -161,9 +173,10 @@ public class joinScript : MonoBehaviour
 
                 joinObject_other.GetComponent<Renderer>().material.color = Color.green;
 
+
                 //Debug.Log("other moved to: " + joinObject_other.transform.position);
                 //joinObject_other.transform.position = joinObject_this.transform.position + posDif;
-                
+
 
                 if (other_grabbedBy != null)
                 {
@@ -212,14 +225,24 @@ public class joinScript : MonoBehaviour
                 //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
                 //Follow followScript = AssemblyManager.GetComponent<Follow>();
                 //followScript.addFollow(gameObject, AssemblyManager); //not sure if you need to pass in Assembly Manager
+                audioSource = GetComponent<AudioSource>();
+                audioSource.clip = goodClip;
+                audioSource.Play();
+
 
                 isAttached = true;
 
-                if(nextObject != null)
+                if (nextObject != null)
                 {
                     nextObject.SetActive(true);
+<<<<<<< HEAD
                     // nextObjectTransparent.SetActive(true);
                 } else {
+=======
+                }
+                else
+                {
+>>>>>>> cf7b1d82786746486c9a945b205540e151be27c4
                     //AssemblyManager.tag = "isJoined";
                     //AssemblyManager.GetComponent<GameObject_data>().enabled = true;
                 }
@@ -235,13 +258,13 @@ public class joinScript : MonoBehaviour
                 KeepingScore.Score += 50;
 
                 //DoubleCheck GameOver
-                if(combinedObject.name == "FinalTFN_Empty")
+                if (combinedObject.name == "FinalTFN_Empty")
                 {
                     //stop timer
                     GameTimerScript.gameOver = true;
                     GameEndScript.gameEnded = true;
                 }
             }
-        }  
+        }
     }
 }
