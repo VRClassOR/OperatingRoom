@@ -35,20 +35,20 @@ public class joinScript : MonoBehaviour
         //        Debug.Log("OnTriggerExit called with other: " + other);
         //    }
         //}
-                
-        //if (other != null && joinObjectSmallCollider != null)
-        //{
-        //    if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
-        //   //&& !collisionAlreadyOccurred)
-        //    {
-        //        Debug.Log("OnTriggerExit called");
-        //        follows = GameObject.FindGameObjectsWithTag("isJoined");
-        //        foreach (GameObject makeFollow in follows)
-        //        {
-        //            makeFollow.transform.parent = gameObject.transform;
-        //        }
-        //    }
-        //}
+
+        if (other != null && joinObjectSmallCollider != null)
+        {
+            if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
+            //&& !collisionAlreadyOccurred)
+            {
+                Debug.Log("OnTriggerExit called");
+                //follows = GameObject.FindGameObjectsWithTag("isJoined");
+                //foreach (GameObject makeFollow in follows)
+                //{
+                //    makeFollow.transform.parent = gameObject.transform;
+                //}
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -144,8 +144,9 @@ public class joinScript : MonoBehaviour
                 }
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
-                
-                Vector3 thePosition = transform.TransformPoint(-21.19889f, 23.17223f, 308.1013f);
+
+                //Vector3 thePosition = transform.TransformDirection(-21.19889f, 23.17223f, 308.1013f);
+                Vector3 thePosition = joinObject_this.transform.TransformPoint(-34f, 9f, 308f);
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
@@ -156,7 +157,8 @@ public class joinScript : MonoBehaviour
                 //- 2.594, -104.66, 2.397 //cyl2 rot
 
                 /////////////////////////////
-                //joinObject_other.transform.position = thePosition;
+             
+                joinObject_other.transform.position = thePosition;
                 //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
 
                 joinObject_other.GetComponent<Renderer>().material.color = Color.green;
