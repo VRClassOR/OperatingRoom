@@ -143,18 +143,14 @@ public class joinScript : MonoBehaviour
                     //grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
                 }
 
-                //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
+                //Vector3 thePosition = joinObject_this.transform.TransformPoint(new Vector3(-35.62242f, 21.03972f, -85.46162f));
 
-                //Vector3 thePosition = transform.TransformDirection(-21.19889f, 23.17223f, 308.1013f);
-                Vector3 thePosition = joinObject_this.transform.TransformPoint(-34f, 9f, 308f);
+                //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
+                Vector3 myRelPos = this.gameObject.GetComponent<collider_data>().myRelativePos1;
+                Vector3 thePosition = joinObject_this.transform.TransformPoint(myRelPos);
+                //Vector3 thePosition = joinObject_this.transform.TransformPoint(-34f, 9f, 308f);
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
-
-                //0.256, -17.102, -85.687 //cyl1 rot
-
-                //- 0.1997525, 1.498708, -3.27729 //cyl2 pos
-
-                //- 2.594, -104.66, 2.397 //cyl2 rot
 
                 /////////////////////////////
              
