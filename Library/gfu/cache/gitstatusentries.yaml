@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2019-03-19T15:50:48.729-05:00
-  initializedAtString: 2019-03-19T15:49:25.561-05:00
+  lastUpdatedAtString: 2019-04-02T21:43:45.020-05:00
+  initializedAtString: 2019-04-02T21:43:44.244-05:00
   entries:
   - path: Assembly-CSharp.csproj
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp.csproj
@@ -39,111 +39,9 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Assets\OperatingRoomScene.unity
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\OperatingRoomScene.unity
-    projectPath: Assets\OperatingRoomScene.unity
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.20.08 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.20.08 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.20.08 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.22.41 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.22.41 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.22.41 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.12 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.12 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.12 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.33 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.33 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.33 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.52 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.23.52 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.23.52 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.25.07 PM.png
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png.meta
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assets\Prefabs\Screen Shot 2019-03-19
-      at 12.25.07 PM.png.meta
-    projectPath: Assets\Prefabs\Screen Shot 2019-03-19 at 12.25.07 PM.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
   - path: Library\assetDatabase3
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\assetDatabase3
     projectPath: Library\assetDatabase3
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\CrashedAssetImports.txt
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\CrashedAssetImports.txt
-    projectPath: Library\CrashedAssetImports.txt
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\CurrentLayout.dwlt
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\CurrentLayout.dwlt
-    projectPath: Library\CurrentLayout.dwlt
     originalPath: 
     status: 3
     staged: 0
@@ -171,83 +69,11 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Library\InspectorExpandedItems.asset
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
+  - path: Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
+    projectPath: Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
     originalPath: 
     status: 3
-    staged: 0
-  - path: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
-    projectPath: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
-    projectPath: Library\metadata\1d\1dfd548e7bccebc40a385f0a9109265d.info
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
-    projectPath: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
-    projectPath: Library\metadata\44\446d0c3e31b5b834d8a88fc1ff881c1c.info
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
-    projectPath: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
-    projectPath: Library\metadata\5f\5f7a5da0bc4b4fc48a6afc914138b9e3.info
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\85\853eb973534a37b419f044b1b125c281
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\85\853eb973534a37b419f044b1b125c281
-    projectPath: Library\metadata\85\853eb973534a37b419f044b1b125c281
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\85\853eb973534a37b419f044b1b125c281.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\85\853eb973534a37b419f044b1b125c281.info
-    projectPath: Library\metadata\85\853eb973534a37b419f044b1b125c281.info
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
-    projectPath: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
-    projectPath: Library\metadata\8f\8f6970d320514dc4c9d479590b3b67e6.info
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
-    projectPath: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
-    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
-    projectPath: Library\metadata\f4\f48ae221fae7e64429427ac33833ff70.info
-    originalPath: 
-    status: 1
     staged: 0
   - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
@@ -261,11 +87,71 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll
+    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    projectPath: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
   - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
     originalPath: 
     status: 3
+    staged: 0
+  - path: ProjectSettings\QualitySettings.asset
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Temp\__Backupscenes\0.backup
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    status: 1
     staged: 0
   - path: Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
@@ -276,6 +162,72 @@ MonoBehaviour:
   - path: Temp\UnityLockfile
     fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
+    projectPath: Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
+    projectPath: Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
+    projectPath: Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
+    projectPath: Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
+    projectPath: Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
+    projectPath: Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
+    projectPath: Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
+    projectPath: Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    projectPath: Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    projectPath: Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
+    projectPath: Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
     originalPath: 
     status: 1
     staged: 0

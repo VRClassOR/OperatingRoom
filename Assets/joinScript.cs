@@ -7,6 +7,8 @@ public class joinScript : MonoBehaviour
     public Rigidbody combinedObject; //delete later, do not use
     public GameObject joinObjectSmallCollider;
     public GameObject nextObject;
+    private AudioSource audioSource;
+    public AudioClip goodClip;
     //public GameObject nextObjectTransparent;
     public GameObject currentObjTransparent;
 
@@ -210,6 +212,10 @@ public class joinScript : MonoBehaviour
                 //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
                 //Follow followScript = AssemblyManager.GetComponent<Follow>();
                 //followScript.addFollow(gameObject, AssemblyManager); //not sure if you need to pass in Assembly Manager
+
+                audioSource = GetComponent<AudioSource>();
+                audioSource.clip = goodClip;
+                audioSource.Play();
 
                 isAttached = true;
 
