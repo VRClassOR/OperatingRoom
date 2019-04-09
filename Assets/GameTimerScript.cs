@@ -59,6 +59,11 @@ public class GameTimerScript : MonoBehaviour {
         timeStarted = false;
         TutorialModeScript.isTutorialModeActivated = true;
         GameObject starterObject = GameObject.Find("GuideConnector_Transparent"); //must have this to make tutorial mode work
-        starterObject.SetActive(true);
+        if(starterObject != null)
+        {
+            starterObject.SetActive(true);
+        }
+        gameOver = false;
+        GameEndScript.gameEnded = false;
     }
 }

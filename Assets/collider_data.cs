@@ -15,6 +15,7 @@ public class collider_data : MonoBehaviour {
 
     public Vector3 myRelativePos1;// = new Vector3(-28.69999f, 10.10001f, 306.9997f);
     public Vector3 myRelativePos2;// = new Vector3(0f, 0f, 0f);
+    public Quaternion myRelativeRotation;
     // Use this for initialization
     void Start () {
         //relativePosDict.Add("DrivingCap", new Vector3(-38.99997f, -9.379983f, -212.3852f));

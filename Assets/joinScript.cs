@@ -18,6 +18,7 @@ public class joinScript : MonoBehaviour
     private GameObject joinObject_other;
     private GameObject AssemblyManager; //pass in from child collider
     private bool isUnjoined = false;
+    private bool userCanUnjoin = false;
 
     public GameObject[] follows;
 
@@ -38,7 +39,7 @@ public class joinScript : MonoBehaviour
         {
             currentObjTransparent.SetActive(false);
         }
-        if (unjoin && unjoinObject != null && !isUnjoined)
+        if (unjoin && unjoinObject != null && !isUnjoined) //&& userCanUnjoin)
         {
             OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
 
@@ -70,7 +71,7 @@ public class joinScript : MonoBehaviour
             if (other.gameObject.CompareTag("joinCollider") && other.gameObject.name == joinObjectSmallCollider.name)
             //&& !collisionAlreadyOccurred)
             {
-                Debug.Log("OnTriggerExit called");
+                //Debug.Log("OnTriggerExit called");
                 //follows = GameObject.FindGameObjectsWithTag("isJoined");
                 //foreach (GameObject makeFollow in follows)
                 //{
@@ -101,7 +102,7 @@ public class joinScript : MonoBehaviour
                 Vector3 newLoc = (Lefthand.transform.position + Righthand.transform.position) / 2;
                 //Vector3 newLoc = combinedObjectLoc.position;
 
-                
+
 
                 //null reference check
                 AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
@@ -115,7 +116,7 @@ public class joinScript : MonoBehaviour
 
                 //Debug.Log("joinObject_other.transform.position: " + joinObject_other.transform.position);
 
-                if(unjoin)
+                if (unjoin)
                 {
                     unjoinObject.tag = "Instrument";
                 } else
@@ -124,7 +125,7 @@ public class joinScript : MonoBehaviour
                     joinObject_this.tag = "isJoined";
                 }
 
-                if(AssemblyManager != AssemblyManager_other)
+                if (AssemblyManager != AssemblyManager_other)
                 {
                     follows = GameObject.FindGameObjectsWithTag("isJoined");
 
@@ -177,10 +178,29 @@ public class joinScript : MonoBehaviour
                     //grabbableScript_other.GrabBegin(other_grabbedBy, other_grabPoints);
                 }
 
+                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
+                if (grabbableScript_this.isGrabbed)
+                {
+                    this_grabbedBy.GrabEnd();
+                }
+
+                Vector3 myRelPos1 = this.gameObject.GetComponent<collider_data>().myRelativePos1;
+                Quaternion myRelRot = this.gameObject.GetComponent<collider_data>().myRelativeRotation;
+
+                Transform other_parent = joinObject_other.transform.parent;
+                joinObject_other.transform.parent = joinObject_this.transform;
+                joinObject_other.transform.localPosition = myRelPos1;
+                if (myRelRot != null)
+                {
+                    joinObject_other.transform.localRotation = myRelRot;
+                }
+                joinObject_other.transform.parent = other_parent;
+
                 //Vector3 thePosition = joinObject_this.transform.TransformPoint(new Vector3(-35.62242f, 21.03972f, -85.46162f));
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
-                Vector3 myRelPos1 = this.gameObject.GetComponent<collider_data>().myRelativePos1;
+                
                 Vector3 thePosition1 = joinObject_this.transform.TransformPoint(myRelPos1);
                 //Vector3 thePosition = joinObject_this.transform.TransformPoint(-34f, 9f, 308f);
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
@@ -202,12 +222,7 @@ public class joinScript : MonoBehaviour
                     other_grabbedBy.GrabBegin();
                 }
 
-                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
-                OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
-                if (grabbableScript_this.isGrabbed)
-                {
-                    this_grabbedBy.GrabEnd();
-                }
+              
                 ///////////////////////////////
                 //joinObject_this.transform.position = other_position + new Vector3(-.1f, -.1f, -.1f);
                 joinObject_this.GetComponent<Renderer>().material.color = Color.green;
@@ -273,6 +288,18 @@ public class joinScript : MonoBehaviour
                 }
 
                 currentObjTransparent.SetActive(false);
+
+                //if(unjoinObject != null)
+                //{
+                //    OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
+                //    OVRGrabber unjoinObject_grabbedBy = grabbableScript_unjoinObject.grabbedBy;
+                //    if (grabbableScript_unjoinObject.isGrabbed)
+                //    {
+                //        unjoinObject_grabbedBy.GrabEnd();
+                //        userCanUnjoin = true;
+
+                //    }
+                //}
 
                 //FollowByTag followScript_other = joinObject_other.GetComponent<FollowByTag>();
                 //followScript_other.isAttached = true;
