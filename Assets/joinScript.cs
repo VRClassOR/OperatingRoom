@@ -4,25 +4,48 @@ using UnityEngine;
 
 public class joinScript : MonoBehaviour
 {
-    public Rigidbody combinedObject; //delete later, do not use
     public GameObject joinObjectSmallCollider;
     public GameObject nextObject;
     private AudioSource audioSource;
     public AudioClip goodClip;
-    //public GameObject nextObjectTransparent;
     public GameObject currentObjTransparent;
+    public bool unjoin; //check this if you are unjoining objects
+    public GameObject unjoinObject;
 
     bool collisionAlreadyOccurred = false;
-    private bool isAttached = false;
+    //private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
     private GameObject AssemblyManager; //pass in from child collider
+    private bool isUnjoined = false;
 
     public GameObject[] follows;
 
+    private void Start()
+    {
+        //maybe switch so joinObject is public global variable, and retrieve small collider?
+        if(joinObjectSmallCollider != null)
+        {
+            joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
+            joinObject_this = gameObject.transform.parent.gameObject;
+        }
+
+    }
+
     private void Update()
     {
-        
+        if(unjoin && unjoinObject != null && !isUnjoined)
+        {
+            OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
+
+            if (grabbableScript_unjoinObject.isGrabbed)
+            {
+                unjoinObject.tag = "Instrument";
+                unjoinObject.transform.parent = null; //detach parent
+                isUnjoined = true;
+                Debug.Log(unjoinObject + " parent set to null");
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -74,9 +97,7 @@ public class joinScript : MonoBehaviour
                 Vector3 newLoc = (Lefthand.transform.position + Righthand.transform.position) / 2;
                 //Vector3 newLoc = combinedObjectLoc.position;
 
-                //maybe switch so joinObject is public global variable, and retrieve small collider?
-                joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
-                joinObject_this = gameObject.transform.parent.gameObject;
+                
 
                 //null reference check
                 AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
@@ -90,8 +111,15 @@ public class joinScript : MonoBehaviour
 
                 //Debug.Log("joinObject_other.transform.position: " + joinObject_other.transform.position);
 
-                joinObject_other.tag = "isJoined";
-                joinObject_this.tag = "isJoined";
+                if(unjoin)
+                {
+                    unjoinObject.tag = "Instrument";
+                } else
+                {
+                    joinObject_other.tag = "isJoined";
+                    joinObject_this.tag = "isJoined";
+                }
+
                 if(AssemblyManager != AssemblyManager_other)
                 {
                     follows = GameObject.FindGameObjectsWithTag("isJoined");
@@ -133,8 +161,8 @@ public class joinScript : MonoBehaviour
                 OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
                 OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
 
-                Vector3 other_position = joinObject_other.transform.position;
-                Vector3 this_position = joinObject_this.transform.position;
+                //Vector3 other_position = joinObject_other.transform.position;
+                //Vector3 this_position = joinObject_this.transform.position;
 
                 //Debug.Log("other position: " + other_position);
 
@@ -148,15 +176,15 @@ public class joinScript : MonoBehaviour
                 //Vector3 thePosition = joinObject_this.transform.TransformPoint(new Vector3(-35.62242f, 21.03972f, -85.46162f));
 
                 //Vector3 posDif = new Vector3((-0.1807941f - 0.1997525f), (1.503024f - 1.498708f), (-3.31163f - 3.27729f));
-                Vector3 myRelPos = this.gameObject.GetComponent<collider_data>().myRelativePos1;
-                Vector3 thePosition = joinObject_this.transform.TransformPoint(myRelPos);
+                Vector3 myRelPos1 = this.gameObject.GetComponent<collider_data>().myRelativePos1;
+                Vector3 thePosition1 = joinObject_this.transform.TransformPoint(myRelPos1);
                 //Vector3 thePosition = joinObject_this.transform.TransformPoint(-34f, 9f, 308f);
                 //Vector3 thePosition = transform.TransformPoint(-32.75218f, 8.096404f, 293.407f);
                 //-0.1807941, 1.503024, -3.31163 //cyl1 pos
 
                 /////////////////////////////
              
-                joinObject_other.transform.position = thePosition;
+                joinObject_other.transform.position = thePosition1;
                 //joinObject_other.transform.position = other_position + new Vector3(.1f, .1f, .1f);
 
                 joinObject_other.GetComponent<Renderer>().material.color = Color.green;
@@ -217,7 +245,7 @@ public class joinScript : MonoBehaviour
                 audioSource.clip = goodClip;
                 audioSource.Play();
 
-                isAttached = true;
+                //isAttached = true;
 
                 if(nextObject != null)
                 {
@@ -237,13 +265,16 @@ public class joinScript : MonoBehaviour
                 //followScript_this.isAttached = true;
 
                 KeepingScore.Score += 50;
+                //KeepingScore keepingScoreObj = GetComponent<KeepingScore>(); //why doesn't this work??
+                //keepingScoreObj.increaseScore();
 
                 //DoubleCheck GameOver
-                if(combinedObject.name == "FinalTFN_Empty")
+                if(nextObject.name == "Finished_Flag")
                 {
                     //stop timer
                     GameTimerScript.gameOver = true;
                     GameEndScript.gameEnded = true;
+               
                 }
             }
         }  

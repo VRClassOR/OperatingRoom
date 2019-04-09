@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class KeepingScore : MonoBehaviour {
 
     public static int Score = 0;
-    double timer = 0.0;
     TextMeshProUGUI textMesh;
 
     private void Start()
@@ -21,5 +21,16 @@ public class KeepingScore : MonoBehaviour {
     {
         textMesh.text = "Score: " + Score.ToString() + "\n" + GameTimerScript.gameTimerText;
             
+    }
+
+    public void setZero() //move to another script?
+    {
+       Score = 0;
+       SceneManager.LoadScene("OperatingRoomScene");
+    }
+
+    public void increaseScore()
+    {
+        Score += 50;
     }
 }
