@@ -34,7 +34,11 @@ public class joinScript : MonoBehaviour
 
     private void Update()
     {
-        if(unjoin && unjoinObject != null && !isUnjoined)
+        if(currentObjTransparent!= null && !TutorialModeScript.isTutorialModeActivated)
+        {
+            currentObjTransparent.SetActive(false);
+        }
+        if (unjoin && unjoinObject != null && !isUnjoined)
         {
             OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
 
@@ -250,6 +254,18 @@ public class joinScript : MonoBehaviour
                 if(nextObject != null)
                 {
                     nextObject.SetActive(true);
+
+                    /////
+                    //if(!TutorialModeScript.isTutorialModeActivated)
+                    //{
+                    //    foreach(GameObject child in nextObject.transform)
+                    //    {
+                    //        if(child.tag == "Transparent Instrument")
+                    //        {
+                    //            child.SetActive(false);
+                    //        }
+                    //    }
+                    //}
                     // nextObjectTransparent.SetActive(true);
                 } else {
                     //AssemblyManager.tag = "isJoined";

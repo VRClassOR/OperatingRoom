@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 57955318}
   m_Layer: 0
   m_Name: Driver_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3879,7 +3879,7 @@ GameObject:
   - component: {fileID: 296479134}
   m_Layer: 0
   m_Name: Nail_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4503,7 +4503,7 @@ GameObject:
   - component: {fileID: 346295137}
   m_Layer: 0
   m_Name: Aiming Arm_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8685,7 +8685,7 @@ GameObject:
   - component: {fileID: 761695909}
   m_Layer: 0
   m_Name: Driving Cap_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14913,7 +14913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joinObjectSmallCollider: {fileID: 1808976971}
-  nextObject: {fileID: 337812993}
+  nextObject: {fileID: 2106272631}
   goodClip: {fileID: 8300000, guid: 13f2a12d791dfd34da4bdc185fd9741f, type: 3}
   currentObjTransparent: {fileID: 296479132}
   unjoin: 0
@@ -15139,6 +15139,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 362056170}
         m_MethodName: startTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1374719848}
+        m_MethodName: setTutorialModeFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15911,7 +15922,7 @@ GameObject:
   - component: {fileID: 1281843419}
   m_Layer: 0
   m_Name: Connector_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17324,6 +17335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e026fcd52a17b243974225f4795351b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transparentInstruments: []
 --- !u!4 &1374719849
 Transform:
   m_ObjectHideFlags: 0
@@ -18933,7 +18945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1581766679
 Transform:
   m_ObjectHideFlags: 0
@@ -19344,8 +19356,8 @@ GameObject:
   - component: {fileID: 1624988689}
   - component: {fileID: 1624988688}
   m_Layer: 0
-  m_Name: Guide Connector_Transparent
-  m_TagString: Instrument
+  m_Name: GuideConnector_Transparent
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20664,7 +20676,7 @@ GameObject:
   - component: {fileID: 1721613276}
   m_Layer: 0
   m_Name: Connector_Transparent
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20924,7 +20936,7 @@ GameObject:
   - component: {fileID: 1737353973}
   m_Layer: 0
   m_Name: Driver_Transparent_2
-  m_TagString: Instrument
+  m_TagString: Transparent Instrument
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26133,6 +26145,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1374719848}
+        m_MethodName: setTutorialModeTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2049997117
@@ -26764,7 +26787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2106272632
 Transform:
   m_ObjectHideFlags: 0
@@ -26793,7 +26816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joinObjectSmallCollider: {fileID: 2077653526}
-  nextObject: {fileID: 1581766678}
+  nextObject: {fileID: 337812993}
   goodClip: {fileID: 8300000, guid: 13f2a12d791dfd34da4bdc185fd9741f, type: 3}
   currentObjTransparent: {fileID: 1281843417}
   unjoin: 0

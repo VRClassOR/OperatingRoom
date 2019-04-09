@@ -51,12 +51,14 @@ public class GameTimerScript : MonoBehaviour {
         timeStarted = true;
     }
 
-    public void Reset()
+    public void Reset() //should put this in another script
     {
         SceneManager.LoadScene("OperatingRoomScene");
         gameTimer = 0f;
         KeepingScore.Score = 0;
         timeStarted = false;
-        
+        TutorialModeScript.isTutorialModeActivated = true;
+        GameObject starterObject = GameObject.Find("GuideConnector_Transparent"); //must have this to make tutorial mode work
+        starterObject.SetActive(true);
     }
 }
