@@ -610,6 +610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -131.6586, y: -10.84435, z: 39.54744}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &52823629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,6 +1875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -28.69999, y: 10.10001, z: 306.9997}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &174818992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3353,6 +3355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -7.976353, y: 55.55177, z: 128.3841}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &249653610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,6 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: 60, y: 14.29999, z: -260.201}
   myRelativePos2: {x: -16.53391, y: -0.6439686, z: 37.62674}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!82 &337812998
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6911,8 +6915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7ab5fe64c29294196b07b0d4381cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRelativePos1: {x: 8.336745, y: -2.465472, z: -165.0016}
+  myRelativePos1: {x: -10, y: -8, z: -164}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!82 &543711151
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9583,6 +9588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: 182, y: 15.04004, z: -240.88}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &847599785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10710,6 +10716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -28.69999, y: 10.10001, z: 306.9997}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &925810874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11426,6 +11433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: 60, y: 14.29999, z: -260.201}
   myRelativePos2: {x: -16.53391, y: -0.6439686, z: 37.62674}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &989190691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14944,6 +14952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -7.976353, y: 55.55177, z: 128.3841}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!82 &1218084385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18594,6 +18603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: 8.336745, y: -2.465472, z: -161.7131}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1553554135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18984,13 +18994,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581766678}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d7ab5fe64c29294196b07b0d4381cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRelativePos1: {x: -32.27758, y: 17.55083, z: 51.33486}
+  myRelativePos1: {x: -65.71377, y: 16.18559, z: -42.9243}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!65 &1581766682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21282,7 +21293,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Step 5:\r\n1) Pick up the handle again.\r\n\n2) Using the T handle on the
     Driver/Connector combo, insert the connector into the opening right above where
-    the nail is attached to the handle.\r\n\n3) Turn clockwise once"
+    the nail is attached to the handle.\r\n\n3) Remove the Connector."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21358,11 +21369,11 @@ MonoBehaviour:
     lineCount: 8
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -21917,6 +21928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -35.62242, y: 21.03972, z: -85.46162}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1803988549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24073,7 +24085,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919206829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -243.00003, y: 3.9999485, z: 82.99971}
+  m_LocalPosition: {x: -48, y: 3.9999485, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1015483548}
@@ -26848,6 +26860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRelativePos1: {x: -28.69999, y: 10.10001, z: 306.9997}
   myRelativePos2: {x: 0, y: 0, z: 0}
+  myRelativeRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!82 &2106272636
 AudioSource:
   m_ObjectHideFlags: 0
