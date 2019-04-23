@@ -5,11 +5,16 @@ using UnityEngine;
 public class TutorialModeScript : MonoBehaviour {
 
     public static bool isTutorialModeActivated = true;
+    public bool viewTransparentObj;
     public GameObject[] transparentInstruments;
 
     // Use this for initialization
     void Start () {
-        
+        //if(turnOffTransparentObj)
+        //{
+        //    GameObject.Find
+        //}
+        isTutorialModeActivated = isTutorialModeActivated && viewTransparentObj;
     }
 	
 	// Update is called once per frame
@@ -36,8 +41,15 @@ public class TutorialModeScript : MonoBehaviour {
 
     public void setTutorialModeTrue()
     {
-        isTutorialModeActivated = true;
-        Debug.Log("Tutorial mode set to true");
+        if(viewTransparentObj)
+        {
+            isTutorialModeActivated = true;
+            Debug.Log("Tutorial mode set to true");
+        } else
+        {
+            setTutorialModeFalse();
+        }
+
     }
 
     public void setTutorialModeFalse()

@@ -17795,6 +17795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e026fcd52a17b243974225f4795351b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viewTransparentObj: 1
   transparentInstruments: []
 --- !u!4 &1374719849
 Transform:
