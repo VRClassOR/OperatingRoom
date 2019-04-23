@@ -37,7 +37,10 @@ public class joinScript : MonoBehaviour
     {
         if(currentObjTransparent!= null && !TutorialModeScript.isTutorialModeActivated)
         {
-            currentObjTransparent.SetActive(false);
+            if(currentObjTransparent.name != "Driver_Transparent_2")
+            {
+                currentObjTransparent.SetActive(false);
+            }
         }
         if (unjoin && unjoinObject != null && !isUnjoined) //&& userCanUnjoin)
         {
