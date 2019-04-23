@@ -21,8 +21,8 @@ public class Reorder : MonoBehaviour {
         connector = GameObject.Find("Connector");
         nail = GameObject.Find("Nail");
         drivingCap = GameObject.Find("Driving Cap");
-        //ReorderA();
         //ReorderB();
+        //ReorderC();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +30,7 @@ public class Reorder : MonoBehaviour {
 	}
 
     //left to right: Driver, AimingArm, Handle, Guide Connector, Connector, Nail, Driver
-    public void ReorderA()
+    public void ReorderB()
     {
         driver.transform.position = new Vector3(1.329f, 1.014f, -5.851f);
         aimingArm.transform.position = new Vector3(1.133f, 1.013f, -5.753f);
@@ -41,7 +41,7 @@ public class Reorder : MonoBehaviour {
         drivingCap.transform.position = new Vector3(0.316f, 1.009413f, -5.73601f);
     }
 
-    public void ReorderB()
+    public void ReorderC()
     {
         drivingCap.transform.position = new Vector3(1.287f, 1.009413f, -5.73601f);
         guideConnector.transform.position = new Vector3(1.084492f, 1.053272f, -5.624957f);
