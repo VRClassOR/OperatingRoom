@@ -10,29 +10,8 @@ public class TutorialModeScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //if(turnOffTransparentObj)
-        //{
-        //    GameObject.Find
-        //}
         isTutorialModeActivated = isTutorialModeActivated && viewTransparentObj;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        //transparentInstruments = GameObject.FindGameObjectsWithTag("Transparent Instrument");
-        //foreach (GameObject transparentInstrument in transparentInstruments)
-        //    {
-        //        if (!isTutorialModeActivated)
-        //        {
-        //            transparentInstrument.SetActive(false);
-        //        } else
-        //        {
-        //            transparentInstrument.SetActive(true);
-        //        }
-                    
-        //    }
-        //}
-	}
 
     public void toggle()
     {
@@ -44,7 +23,6 @@ public class TutorialModeScript : MonoBehaviour {
         if(viewTransparentObj)
         {
             isTutorialModeActivated = true;
-            Debug.Log("Tutorial mode set to true");
         } else
         {
             setTutorialModeFalse();

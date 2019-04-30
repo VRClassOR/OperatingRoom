@@ -13,7 +13,6 @@ public class joinScript : MonoBehaviour
     public GameObject unjoinObject;
 
     bool collisionAlreadyOccurred = false;
-    //private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
     private GameObject AssemblyManager; //pass in from child collider
@@ -24,7 +23,6 @@ public class joinScript : MonoBehaviour
 
     private void Start()
     {
-        //maybe switch so joinObject is public global variable, and retrieve small collider?
         if(joinObjectSmallCollider != null)
         {
             joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
@@ -42,7 +40,7 @@ public class joinScript : MonoBehaviour
                 currentObjTransparent.SetActive(false);
             }
         }
-        if (unjoin && unjoinObject != null && !isUnjoined) //&& userCanUnjoin)
+        if (unjoin && unjoinObject != null && !isUnjoined)
         {
             OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
 
@@ -66,15 +64,9 @@ public class joinScript : MonoBehaviour
                 collisionAlreadyOccurred = true;
                 Transform combinedObjectLoc = gameObject.transform;
 
-                OVRGrabber Lefthand = GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>();
-                OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
-
                 //null reference check
-                AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager; //what if join_object_other and joinObject_this have different assembly managers?
+                AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager;
                 GameObject AssemblyManager_other = joinObject_other.GetComponent<GameObject_data>().AssemblyManager;
-
-                //joinObject_other.transform.parent = AssemblyManager.transform;
-                //joinObject_this.transform.parent = AssemblyManager.transform;
 
                 if (unjoin)
                 {
@@ -104,9 +96,6 @@ public class joinScript : MonoBehaviour
                     }
                 }
 
-                //joinObject_other.transform.parent = AssemblyManager.transform;
-                //joinObject_this.transform.parent = AssemblyManager.transform;
-
                 OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
                 OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
 
@@ -122,10 +111,8 @@ public class joinScript : MonoBehaviour
                     this_grabbedBy.GrabEnd();
                 }
 
-                //joinObject_other.transform.position = thePosition1;
                 joinObject_other.transform.position = currentObjTransparent.transform.position;
                 joinObject_other.transform.rotation = currentObjTransparent.transform.rotation;
-                //joinObject_other.transform.scale = currentObjTransparent.transform.scale;
 
                 joinObject_other.GetComponent<Renderer>().material.color = Color.green;
 

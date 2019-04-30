@@ -125,17 +125,12 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
-        //Debug.Log("gameObject.tag: " + gameObject.tag);
-
         if (gameObject.tag == "isJoined")
         {
-            //Debug.Log("grabbed collider: " + m_grabbedCollider);
-            //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
             GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
             Follow followScript = AssemblyManager.GetComponent<Follow>();
-            followScript.addFollow(gameObject, AssemblyManager); //not sure if you need to pass in Assembly Manager
+            followScript.addFollow(gameObject, AssemblyManager);
         }
-        //Debug.Log("grabbed collider: " + m_grabbedCollider);
     }
 
 	/// <summary>
@@ -152,8 +147,6 @@ public class OVRGrabbable : MonoBehaviour
 
         if(gameObject.tag == "isJoined")
         {
-            //Debug.Log("Grab End called");
-            //GameObject AssemblyManager = GameObject.Find("AssemblyManager");
             GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
             Follow followScript = AssemblyManager.GetComponent<Follow>();
             followScript.removeFollow(gameObject);

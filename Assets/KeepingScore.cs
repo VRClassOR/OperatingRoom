@@ -23,7 +23,7 @@ public class KeepingScore : MonoBehaviour {
             
     }
 
-    public void setZero() //move to another script?
+    public void setZero()
     {
        Score = 0;
        SceneManager.LoadScene("OperatingRoomScene");

@@ -51,7 +51,7 @@ public class GameTimerScript : MonoBehaviour {
         timeStarted = true;
     }
 
-    public void Reset() //should put this in another script
+    public void Reset()
     {
         SceneManager.LoadScene("OperatingRoomScene");
         gameTimer = 0f;

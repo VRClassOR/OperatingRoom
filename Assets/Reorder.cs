@@ -23,7 +23,7 @@ public class Reorder : MonoBehaviour {
         drivingCap = GameObject.Find("Driving Cap");
         //ReorderB();
         //ReorderC();
-        ReorderD();
+        //ReorderD();
 	}
 	
 	// Update is called once per frame
