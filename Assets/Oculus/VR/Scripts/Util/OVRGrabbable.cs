@@ -42,9 +42,11 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
-	/// <summary>
-	/// If true, the object can currently be grabbed.
-	/// </summary>
+    //public bool isAttached = false;
+
+    /// <summary>
+    /// If true, the object can currently be grabbed.
+    /// </summary>
     public bool allowOffhandGrab
     {
         get { return m_allowOffhandGrab; }
@@ -53,7 +55,7 @@ public class OVRGrabbable : MonoBehaviour
 	/// <summary>
 	/// If true, the object is currently grabbed.
 	/// </summary>
-    public bool isGrabbed
+    virtual public bool isGrabbed
     {
         get { return m_grabbedBy != null; }
     }
@@ -122,6 +124,13 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+        if (gameObject.tag == "isJoined")
+        {
+            GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
+            Follow followScript = AssemblyManager.GetComponent<Follow>();
+            followScript.addFollow(gameObject, AssemblyManager);
+        }
     }
 
 	/// <summary>
@@ -135,6 +144,13 @@ public class OVRGrabbable : MonoBehaviour
         rb.angularVelocity = angularVelocity;
         m_grabbedBy = null;
         m_grabbedCollider = null;
+
+        if(gameObject.tag == "isJoined")
+        {
+            GameObject AssemblyManager = gameObject.GetComponent<GameObject_data>().AssemblyManager;
+            Follow followScript = AssemblyManager.GetComponent<Follow>();
+            followScript.removeFollow(gameObject);
+        }
     }
 
     void Awake()

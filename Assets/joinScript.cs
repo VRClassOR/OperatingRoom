@@ -4,37 +4,54 @@ using UnityEngine;
 
 public class joinScript : MonoBehaviour
 {
-    public Rigidbody combinedObject;
     public GameObject joinObjectSmallCollider;
-    public GameObject AssemblyManager;
+    public GameObject nextObject;
+    private AudioSource audioSource;
+    public AudioClip goodClip;
+    public GameObject currentObjTransparent;
+    public bool unjoin; //check this if you are unjoining objects
+    public GameObject unjoinObject;
 
     bool collisionAlreadyOccurred = false;
-    private bool isAttached = false;
     private GameObject joinObject_this;
     private GameObject joinObject_other;
-    private FixedJoint myJoint;
+    private GameObject AssemblyManager; //pass in from child collider
+    private bool isUnjoined = false;
+    private bool userCanUnjoin = false;
 
-    //private void Update()
-    //{
-    //    if(isAttached)
-    //    {
-    //AssemblyManager = GameObject.Find("AssemblyManager");
-    //AssemblyManager.transform.position = joinObject_this.transform.position - joinObject_this.transform.localPosition;
-    //AssemblyManager.transform.position = new Vector3(.2f, 1.5f, -5f);
-    //Debug.Log("join object pos: " + joinObject_this.transform.position);
-    //AssemblyManager.transform.position = joinObject_this.transform.position;
-    //Debug.Log("join object pos: " + joinObject_this.transform.position);
-    //Debug.Log("assembly manager pos: " + AssemblyManager.transform.position);
-    //Vector3 offset = new Vector3(.5f, .5f, .5f);
-    //joinObject_other.transform.localPosition = joinObject_this.transform.localPosition + offset;
-    //float dist = (AssemblyManager.transform.position - joinObject_this.transform.position).magnitude;
-    //call method that changes position. this way, once the grabber is let go of, it snaps into place
-    //    }
-    //}
+    public GameObject[] follows;
+
+    private void Start()
+    {
+        if(joinObjectSmallCollider != null)
+        {
+            joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
+            joinObject_this = gameObject.transform.parent.gameObject;
+        }
+
+    }
 
     private void Update()
     {
-        
+        if(currentObjTransparent!= null && !TutorialModeScript.isTutorialModeActivated)
+        {
+            if(currentObjTransparent.name != "Driver_Transparent_2")
+            {
+                currentObjTransparent.SetActive(false);
+            }
+        }
+        if (unjoin && unjoinObject != null && !isUnjoined)
+        {
+            OVRGrabbable grabbableScript_unjoinObject = unjoinObject.GetComponent<OVRGrabbable>();
+
+            if (grabbableScript_unjoinObject.isGrabbed)
+            {
+                unjoinObject.tag = "Instrument";
+                unjoinObject.transform.parent = null; //detach parent
+                isUnjoined = true;
+                Debug.Log(unjoinObject + " parent set to null");
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,72 +63,93 @@ public class joinScript : MonoBehaviour
             {
                 collisionAlreadyOccurred = true;
                 Transform combinedObjectLoc = gameObject.transform;
-                //Debug.Log("destroy, me: " + gameObject.transform.parent.gameObject);
-                //Debug.Log("destroy, other: " + other.gameObject.transform.parent.gameObject);
-                //Destroy(gameObject.transform.parent.gameObject);
-                //Destroy(other.gameObject.transform.parent.gameObject);
 
-                OVRGrabber Lefthand = GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>();
-                OVRGrabber Righthand = GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>();
-                Vector3 newLoc = (Lefthand.transform.position + Righthand.transform.position) / 2;
-                //Vector3 newLoc = combinedObjectLoc.position;
+                //null reference check
+                AssemblyManager = joinObject_this.GetComponent<GameObject_data>().AssemblyManager;
+                GameObject AssemblyManager_other = joinObject_other.GetComponent<GameObject_data>().AssemblyManager;
 
-                //maybe switch so joinObject is public global variable, and retrieve small collider?
-                joinObject_other = joinObjectSmallCollider.transform.parent.gameObject;
-                joinObject_this = gameObject.transform.parent.gameObject;
-                Debug.Log("joinObjSmallCollider: " + joinObjectSmallCollider.name);
-                Debug.Log("join object other: " + joinObject_other.name);
-                AssemblyManager = GameObject.Find("AssemblyManager");
-                //make this and join object children of AssemblyManager
-                joinObject_other.transform.parent = AssemblyManager.transform;
-                joinObject_this.transform.parent = AssemblyManager.transform;
+                if (unjoin)
+                {
+                    unjoinObject.tag = "Instrument";
+                } else
+                {
+                    joinObject_other.tag = "isJoined";
+                    joinObject_this.tag = "isJoined";
+                }
 
-                FollowMe followScript_other = joinObject_other.GetComponent<FollowMe>();
-                followScript_other.isAttached = true;
-                followScript_other.follow = joinObject_this.transform;
-                followScript_other.originalLocalPosition = joinObject_this.transform.localPosition;
-                followScript_other.originalLocalRotation = joinObject_this.transform.localRotation;
+                if (AssemblyManager != AssemblyManager_other)
+                {
+                    follows = GameObject.FindGameObjectsWithTag("isJoined");
 
-                FollowMe followScript_this = joinObject_this.GetComponent<FollowMe>();
-                followScript_this.isAttached = true;
-                followScript_this.follow = joinObject_this.transform;
-                followScript_this.originalLocalPosition = joinObject_this.transform.localPosition;
-                followScript_this.originalLocalRotation = joinObject_this.transform.localRotation;
+                    //first put under assembly manager other/un-nest anything
+                    foreach (GameObject makeFollow in follows)
+                    {
+                        if (makeFollow.GetComponent<GameObject_data>().AssemblyManager == AssemblyManager_other)
+                        {
+                            makeFollow.transform.parent = AssemblyManager_other.transform;
+                        }
+                    }
 
-                //Follow.follow = joinObject_this.transform;
-                //Follow.originalLocalPosition = joinObject_this.transform.localPosition;
-                //Follow.originalLocalRotation = joinObject_this.transform.localRotation;
+                    foreach (Transform child in AssemblyManager_other.transform)
+                    {
+                        child.GetComponent<GameObject_data>().AssemblyManager = AssemblyManager;
+                    }
+                }
 
-                //myJoint = joinObject_this.AddComponent<FixedJoint>();
-                //myJoint.connectedBody = joinObject_other.GetComponent<Rigidbody>();
+                OVRGrabbable grabbableScript_other = joinObject_other.GetComponent<OVRGrabbable>();
+                OVRGrabber other_grabbedBy = grabbableScript_other.grabbedBy;
 
-                //joinObject_this.transform.localPosition = new Vector3 (0f, 0f, 0f);
-                //joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f);
+                if (grabbableScript_other.isGrabbed)
+                {
+                    other_grabbedBy.GrabEnd();
+                }
 
-                isAttached = true;
+                OVRGrabbable grabbableScript_this = joinObject_this.GetComponent<OVRGrabbable>();
+                OVRGrabber this_grabbedBy = grabbableScript_this.grabbedBy;
+                if (grabbableScript_this.isGrabbed)
+                {
+                    this_grabbedBy.GrabEnd();
+                }
 
-                //AssemblyManager.transform.position = joinObject_this.transform.position;
-                //Vector3 offset = new Vector3(.5f, .5f, .5f);
-                //joinObject_other.transform.position = AssemblyManager.transform.position + offset;
+                joinObject_other.transform.position = currentObjTransparent.transform.position;
+                joinObject_other.transform.rotation = currentObjTransparent.transform.rotation;
 
-                //fix position of this and join object
-                //joinObject_other.transform.localPosition = new Vector3(0f, 0f, 0f); //since using localPosition, (0 0 0) sets to position of assemblyManager
-                //joinObject_this.transform.localPosition = new Vector3(1f, 1f, 1f);
+                joinObject_other.GetComponent<Renderer>().material.color = Color.green;
 
-                //rhs is parent transform of gameObject, which is a smallCollider
-                //joinObject.transform.parent = gameObject.transform.parent.gameObject.transform;
-                //joinObject.transform.position = new Vector3(-.5f, 1.47f, -3f); //make vec a variable
+                if (other_grabbedBy != null)
+                {
+                    other_grabbedBy.GrabBegin();
+                }
 
-                //Rigidbody partialInstance;
-                //partialInstance = Instantiate(combinedObject, newLoc, combinedObjectLoc.rotation) as Rigidbody;
+                joinObject_this.GetComponent<Renderer>().material.color = Color.green;
+
+                if (this_grabbedBy != null)
+                {
+                    this_grabbedBy.GrabBegin();
+                }
+
+                audioSource = GetComponent<AudioSource>();
+                audioSource.clip = goodClip;
+                audioSource.Play();
+
+                //isAttached = true;
+
+                if(nextObject != null)
+                {
+                    nextObject.SetActive(true);
+                }
+
+                currentObjTransparent.SetActive(false);
+
                 KeepingScore.Score += 50;
 
                 //DoubleCheck GameOver
-                if(combinedObject.name == "FinalTFN_Empty")
+                if(nextObject.name == "Finished_Flag")
                 {
                     //stop timer
                     GameTimerScript.gameOver = true;
                     GameEndScript.gameEnded = true;
+               
                 }
             }
         }  

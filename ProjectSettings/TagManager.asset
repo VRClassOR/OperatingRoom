@@ -17,6 +17,8 @@ TagManager:
   - Cylinder1Child
   - Cylinder2Child
   - joinCollider
+  - isJoined
+  - Transparent Instrument
   layers:
   - Default
   - TransparentFX

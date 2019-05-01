@@ -12,114 +12,222 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-10-26T12:36:08.553-05:00
-  initializedAtString: 2018-10-26T12:25:09.526-05:00
+  lastUpdatedAtString: 2019-04-02T21:43:45.020-05:00
+  initializedAtString: 2019-04-02T21:43:44.244-05:00
   entries:
+  - path: Assembly-CSharp.csproj
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assembly-CSharp-Editor.csproj
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp-Editor.csproj
+    projectPath: Assembly-CSharp-Editor.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assembly-CSharp-Editor-firstpass.csproj
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp-Editor-firstpass.csproj
+    projectPath: Assembly-CSharp-Editor-firstpass.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assembly-CSharp-firstpass.csproj
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Assembly-CSharp-firstpass.csproj
+    projectPath: Assembly-CSharp-firstpass.csproj
+    originalPath: 
+    status: 3
+    staged: 0
   - path: Library\assetDatabase3
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\assetDatabase3
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\assetDatabase3
     projectPath: Library\assetDatabase3
     originalPath: 
     status: 3
     staged: 0
-  - path: Library\gfu\cache\branches.yaml
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\branches.yaml
-    projectPath: Library\gfu\cache\branches.yaml
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Library\gfu\cache\gitlocks.yaml
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gitlocks.yaml
-    projectPath: Library\gfu\cache\gitlocks.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\gfu\cache\gitlog.yaml
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gitlog.yaml
-    projectPath: Library\gfu\cache\gitlog.yaml
+  - path: Library\EditorInstance.json
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
     originalPath: 
     status: 1
     staged: 0
   - path: Library\gfu\cache\gitstatusentries.yaml
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\gfu\cache\gitstatusentries.yaml
     projectPath: Library\gfu\cache\gitstatusentries.yaml
     originalPath: 
     status: 3
     staged: 0
   - path: Library\gfu\cache\gittrackingstatus.yaml
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\gfu\cache\gittrackingstatus.yaml
     projectPath: Library\gfu\cache\gittrackingstatus.yaml
     originalPath: 
     status: 3
     staged: 0
+  - path: Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
+    projectPath: Library\metadata\52\5233124b6e577db48b4e6b5577ca0056.info
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll
+    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    projectPath: Library\ScriptAssemblies\Assembly-UnityScript.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    projectPath: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: ProjectSettings\QualitySettings.asset
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
   - path: Temp\__Backupscenes\0.backup
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\__Backupscenes\0.backup
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\__Backupscenes\0.backup
     projectPath: Temp\__Backupscenes\0.backup
     originalPath: 
     status: 1
     staged: 0
   - path: Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
     projectPath: Temp\ProcessJobs\e9a6970f79cd12d8b075e7d72f1b07cb.bakert
     originalPath: 
     status: 1
     staged: 0
   - path: Temp\UnityLockfile
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityLockfile
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-19854d8256abc84468aac77411911d4f
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-19854d8256abc84468aac77411911d4f
-    projectPath: Temp\UnityTempFile-19854d8256abc84468aac77411911d4f
+  - path: Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
+    projectPath: Temp\UnityTempFile-05997fd556653f64b900bd6bc3af62bc
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-318f4c8d4bdce0d499b41693374b6665
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-318f4c8d4bdce0d499b41693374b6665
-    projectPath: Temp\UnityTempFile-318f4c8d4bdce0d499b41693374b6665
+  - path: Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
+    projectPath: Temp\UnityTempFile-093773824fe1fca4ba15e64037089f1e
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-4d12f1873ab8aed42a16f3aa8ab2e382
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-4d12f1873ab8aed42a16f3aa8ab2e382
-    projectPath: Temp\UnityTempFile-4d12f1873ab8aed42a16f3aa8ab2e382
+  - path: Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
+    projectPath: Temp\UnityTempFile-09eef23d6faee9140b101725268ed9bb
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-5efa685009fb8d6409cf23717474dd34
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-5efa685009fb8d6409cf23717474dd34
-    projectPath: Temp\UnityTempFile-5efa685009fb8d6409cf23717474dd34
+  - path: Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
+    projectPath: Temp\UnityTempFile-0ac00a01a40debe46b3c4e24235ca1ef
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-7044f573d0e5198498ef09fe47509739
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-7044f573d0e5198498ef09fe47509739
-    projectPath: Temp\UnityTempFile-7044f573d0e5198498ef09fe47509739
+  - path: Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
+    projectPath: Temp\UnityTempFile-0e384e74c3e0bee44b1a6db8951cad72
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-8a1e230fe4a54024b8d59a355ba0ec8f
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-8a1e230fe4a54024b8d59a355ba0ec8f
-    projectPath: Temp\UnityTempFile-8a1e230fe4a54024b8d59a355ba0ec8f
+  - path: Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
+    projectPath: Temp\UnityTempFile-39103d56541915a46a3f6795d9d2d127
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-9dde6ff4c6fea2b4c8351499ac80768c
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-9dde6ff4c6fea2b4c8351499ac80768c
-    projectPath: Temp\UnityTempFile-9dde6ff4c6fea2b4c8351499ac80768c
+  - path: Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
+    projectPath: Temp\UnityTempFile-42e1df1c19a997a4286df7cd4976143e
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-c55cabb80a9230b47b2dd9fab876c510
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-c55cabb80a9230b47b2dd9fab876c510
-    projectPath: Temp\UnityTempFile-c55cabb80a9230b47b2dd9fab876c510
+  - path: Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
+    projectPath: Temp\UnityTempFile-5a3f67cf430316243bec8f3849c2d13a
     originalPath: 
     status: 1
     staged: 0
-  - path: Temp\UnityTempFile-d13601a2293f60443b8dbe855bcd4d4b
-    fullPath: C:\Users\rileymr1\Documents\OperatingRoom-master\VROperatingRoom\Temp\UnityTempFile-d13601a2293f60443b8dbe855bcd4d4b
-    projectPath: Temp\UnityTempFile-d13601a2293f60443b8dbe855bcd4d4b
+  - path: Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    projectPath: Temp\UnityTempFile-7afdf8227fdccc247b45d0b04b7ea4f7
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    projectPath: Temp\UnityTempFile-d9838dec2d7a188479bcd2eb6acd15dc
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
+    fullPath: C:\Users\lala\Desktop\OperatingRoom\Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
+    projectPath: Temp\UnityTempFile-edac0091b2693ae41a28fa33307038f6
     originalPath: 
     status: 1
     staged: 0
